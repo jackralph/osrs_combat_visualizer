@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-    <div id="example"></div>
-        <script src="/js/components/Example.js"></script>
+    <div id="content"></div>
+        <script src="/js/components/App.js"></script>
     </body>
 </html>
