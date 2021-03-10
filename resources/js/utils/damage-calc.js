@@ -1,3 +1,7 @@
-export function foo() {
-    console.log("Hello");
+const maxAttackRoll = (effectiveLevel, equipmentBonus) => {
+    return effectiveLevel * (equipmentBonus + 64);
+}
+
+module.exports = {
+    maxAttackRoll
 }

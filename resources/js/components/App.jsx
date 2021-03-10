@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {foo} from '../utils/damage-calc';
 
 function App() {
     return (
@@ -9,7 +8,6 @@ function App() {
                 <div className="col-md-8">
                     <div className="card">
                         <div className="card-header">App Component</div>
-                        {foo()}
                         <div className="card-body">I'm an example component!</div>
                     </div>
                 </div>
