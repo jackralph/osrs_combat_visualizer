@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-    <div id="content"></div>
+    <div id="content" style="text-align: center;"></div>
         <script src="/js/components/App.js"></script>
     </body>
 </html>
