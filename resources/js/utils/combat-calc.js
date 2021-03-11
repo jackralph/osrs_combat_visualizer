@@ -14,8 +14,17 @@ const maxHit = (effectiveLevel, equipmentBonus, setBonus, voidSet = false) => {
     }
 }
 
+const maxAttackRoll = (effectiveLevel, equipmentBonus, setBonus = 1) => {
+    if (setBonus === 1.1667) {
+        return (effectiveLevel * (equipmentBonus + 64)) * 7 / 6;
+    } else {
+        return (effectiveLevel * (equipmentBonus + 64)) * setBonus;
+    }
+}
+
 module.exports = {
     effectiveLevel,
     potionBoost,
-    maxHit
+    maxHit,
+    maxAttackRoll
 }
