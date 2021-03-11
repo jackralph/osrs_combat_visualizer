@@ -1,8 +1,8 @@
 const {
     effectiveLevel,
-    maxHit,
-    potionBoost
-} = require('../../resources/js/utils/max-hit')
+    potionBoost,
+    maxHit
+} = require('../../resources/js/utils/combat-calc')
 
 describe("Calculating Max Hit", () => {
     describe("effectiveLevel()", () => {
