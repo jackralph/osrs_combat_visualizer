@@ -22,6 +22,10 @@ const maxAttackRoll = (effectiveLevel, equipmentBonus, setBonus = 1) => {
     }
 }
 
+const maxDefenceRoll = () => {
+    
+}
+
 module.exports = {
     effectiveLevel,
     potionBoost,
