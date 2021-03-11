@@ -2,10 +2,13 @@ const {
     effectiveLevel,
     potionBoost,
     maxHit,
-    maxAttackRoll
+    maxAttackRoll,
+    maxDefenceRoll,
+    hitChance,
+    damagePerSecond
 } = require('../../resources/js/utils/combat-calc')
 
-describe("Calculating Max Hit", () => {
+describe("Calculating Damage", () => {
     describe("effectiveLevel()", () => {
         test("returns the effective level of a skill", () => {
             // strength effective level according to osrsbox calculations
@@ -35,6 +38,30 @@ describe("Calculating Max Hit", () => {
             expect(maxAttackRoll(effectiveLevel(97, potionBoost(97, 5, 0.15), 1.20, 3), 136, 1.2)).toBe(36000);
             // slayer helm max attack roll
             expect(maxAttackRoll(effectiveLevel(97, potionBoost(97, 5, 0.15), 1.20, 3), 136, 1.1667)).toBe(35000);
+        });
+    });
+    describe("maxDefenceRoll()", () => {
+        test("returns the max defence roll", () => {
+            // max defence roll of abyssal demon according to osrs box calculations
+            expect(maxDefenceRoll(effectiveLevel(135, 0, 1, 1), 20)).toBe(12096);
+        });
+    });
+    describe("hitChance()", () => {
+        test("returns the hit chance", () => {
+            const playerAttackRoll = maxAttackRoll(effectiveLevel(97, potionBoost(97, 5, 0.15), 1.20, 3), 136, 1.1667);
+            const abyssalDemonDefenceRoll = maxDefenceRoll(effectiveLevel(135, 0, 1, 1), 20);
+            // hit chance vs abyssal demon according to osrs box calculations
+            expect(hitChance(playerAttackRoll, abyssalDemonDefenceRoll)).toBe(0.82717636639);
+        });
+    });
+    describe("damagePerSecond()", () => {
+        test("returns the damage per second", () => {
+            const playerAttackRoll = maxAttackRoll(effectiveLevel(97, potionBoost(97, 5, 0.15), 1.20, 3), 136, 1.1667);
+            const abyssalDemonDefenceRoll = maxDefenceRoll(effectiveLevel(135, 0, 1, 1), 20);
+            const playerHitChance = hitChance(playerAttackRoll, abyssalDemonDefenceRoll);
+            const playerMaxHit = maxHit(effectiveLevel(99, potionBoost(99, 5, 0.15), 1.23, 0), 133, 1.1667)
+            // damage per second vs abyssal demon according to osrs box calculations
+            expect(damagePerSecond(playerHitChance, playerMaxHit, 2.4)).toBe(9.30573412189);
         });
     });
 });

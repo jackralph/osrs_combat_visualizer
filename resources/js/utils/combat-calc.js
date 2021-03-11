@@ -22,13 +22,28 @@ const maxAttackRoll = (effectiveLevel, equipmentBonus, setBonus = 1) => {
     }
 }
 
-const maxDefenceRoll = () => {
-    
+const maxDefenceRoll = (effectiveLevel, equipmentBonus) => {
+    return effectiveLevel * (equipmentBonus + 64);
+}
+
+const hitChance = (maxAttackRoll, maxDefenceRoll) => {
+    if (maxAttackRoll > maxDefenceRoll) {
+        return Number((1 - (maxDefenceRoll + 2) / (2 * (maxAttackRoll + 1))).toFixed(11));
+    } else {
+        return Number((maxAttackRoll / (2 * maxDefenceRoll + 1)).toFixed(11));
+    }
+}
+
+const damagePerSecond = (hitChance, maxHit, attackInterval) => {
+    return Number((hitChance * (maxHit / 2) / attackInterval).toFixed(11));
 }
 
 module.exports = {
     effectiveLevel,
     potionBoost,
     maxHit,
-    maxAttackRoll
+    maxAttackRoll,
+    maxDefenceRoll,
+    hitChance,
+    damagePerSecond
 }
