@@ -1834,6 +1834,38 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/CV.jsx":
+/*!*****************************!*\
+  !*** ./resources/js/CV.jsx ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _components_CombatVisualizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CombatVisualizer */ "./resources/js/components/CombatVisualizer.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function CV() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_CombatVisualizer__WEBPACK_IMPORTED_MODULE_2__.default, {});
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CV);
+
+if (document.getElementById('content')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(CV, {}), document.getElementById('content'));
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -1853,7 +1885,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./components/App */ "./resources/js/components/App.jsx");
+__webpack_require__(/*! ./CV */ "./resources/js/CV.jsx");
 
 /***/ }),
 
@@ -1901,10 +1933,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/App.jsx":
-/*!*****************************************!*\
-  !*** ./resources/js/components/App.jsx ***!
-  \*****************************************/
+/***/ "./resources/js/components/CombatVisualizer.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/components/CombatVisualizer.jsx ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1913,40 +1945,184 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/combat-calc */ "./resources/js/utils/combat-calc.js");
+/* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
-function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "container",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "row justify-content-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "col-md-8",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "card",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "card-header",
-            children: "App Component"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "card-body",
-            children: "I'm an example component!"
-          })]
-        })
-      })
-    })
+
+var CombatVisualizer = function CombatVisualizer() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState2 = _slicedToArray(_useState, 2),
+      playerAttackLevel = _useState2[0],
+      setPlayerAttackLevel = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      playerAttackPotionEffect = _useState4[0],
+      setPlayerAttackPotionEffect = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState6 = _slicedToArray(_useState5, 2),
+      playerAttackPrayerEffect = _useState6[0],
+      setPlayerAttackPrayerEffect = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(3),
+      _useState8 = _slicedToArray(_useState7, 2),
+      playerAttackCombatStyleEffect = _useState8[0],
+      setPlayerAttackCombatStyleEffect = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState10 = _slicedToArray(_useState9, 2),
+      playerStrengthLevel = _useState10[0],
+      setPlayerStrengthLevel = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState12 = _slicedToArray(_useState11, 2),
+      playerStrengthPotionEffect = _useState12[0],
+      setPlayerStrengthPotionEffect = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState14 = _slicedToArray(_useState13, 2),
+      playerStrengthPrayerEffect = _useState14[0],
+      setPlayerStrengthPrayerEffect = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState16 = _slicedToArray(_useState15, 2),
+      playerStrengthCombatStyleEffect = _useState16[0],
+      setPlayerStrengthCombatStyleEffect = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState18 = _slicedToArray(_useState17, 2),
+      playerStrengthEquipmentBonus = _useState18[0],
+      setPlayerStrengthEquipmentBonus = _useState18[1];
+
+  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState20 = _slicedToArray(_useState19, 2),
+      playerStrengthSetBonus = _useState20[0],
+      setPlayerStrengthSetBonus = _useState20[1];
+
+  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState22 = _slicedToArray(_useState21, 2),
+      playerVoidSet = _useState22[0],
+      setPlayerVoidSet = _useState22[1];
+
+  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(playerAttackLevel, playerAttackPotionEffect, playerAttackPrayerEffect, playerAttackCombatStyleEffect)),
+      _useState24 = _slicedToArray(_useState23, 2),
+      playerEffectiveAttackLevel = _useState24[0],
+      setPlayerEffectiveAttackLevel = _useState24[1];
+
+  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(playerStrengthLevel, playerStrengthPotionEffect, playerStrengthPrayerEffect, playerStrengthCombatStyleEffect)),
+      _useState26 = _slicedToArray(_useState25, 2),
+      playerEffectiveStrengthLevel = _useState26[0],
+      setPlayerEffectiveStrengthLevel = _useState26[1];
+
+  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxHit)(playerEffectiveStrengthLevel, playerStrengthEquipmentBonus, playerStrengthSetBonus, playerVoidSet)),
+      _useState28 = _slicedToArray(_useState27, 2),
+      playerMaxHit = _useState28[0],
+      setPlayerMaxHit = _useState28[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    setPlayerEffectiveStrengthLevel((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(playerStrengthLevel, playerStrengthPotionEffect, playerStrengthPrayerEffect, playerStrengthCombatStyleEffect));
+  }, [playerStrengthLevel, playerStrengthPotionEffect, playerStrengthPrayerEffect, playerStrengthCombatStyleEffect]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+      children: ["Effective Attack Level: ", playerEffectiveAttackLevel]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+      children: ["Effective Strength Level: ", playerEffectiveStrengthLevel]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+      children: ["Max Hit: ", playerMaxHit]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+      onClick: function onClick() {
+        return setPlayerStrengthCombatStyleEffect(3);
+      },
+      children: "Aggressive"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+      onClick: function onClick() {
+        return setPlayerStrengthLevel(playerStrengthLevel + 1);
+      },
+      children: "Increase Strength Level"
+    })]
   });
-}
+};
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CombatVisualizer);
 
-if (document.getElementById('content')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(App, {}), document.getElementById('content'));
-}
+/***/ }),
+
+/***/ "./resources/js/utils/combat-calc.js":
+/*!*******************************************!*\
+  !*** ./resources/js/utils/combat-calc.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+var effectiveLevel = function effectiveLevel(skillLevel, potionEffect, prayerEffect, combatStyleEffect) {
+  return Math.floor((skillLevel + potionEffect) * prayerEffect + combatStyleEffect + 8);
+};
+
+var potionBoost = function potionBoost(skillLevel, levelBoostInt, levelBoostPercent) {
+  return Math.floor(levelBoostInt + skillLevel * levelBoostPercent);
+};
+
+var maxHit = function maxHit(effectiveLevel, equipmentBonus, setBonus) {
+  var voidSet = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+  if (voidSet) {
+    return Math.floor((0.5 + effectiveLevel * (equipmentBonus + 64) / 640) * setBonus);
+  } else {
+    return Math.floor(Math.floor(0.5 + effectiveLevel * (equipmentBonus + 64) / 640) * setBonus);
+  }
+};
+
+var maxAttackRoll = function maxAttackRoll(effectiveLevel, equipmentBonus) {
+  var setBonus = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  if (setBonus === 1.1667) {
+    return effectiveLevel * (equipmentBonus + 64) * 7 / 6;
+  } else {
+    return effectiveLevel * (equipmentBonus + 64) * setBonus;
+  }
+};
+
+var maxDefenceRoll = function maxDefenceRoll(effectiveLevel, equipmentBonus) {
+  return effectiveLevel * (equipmentBonus + 64);
+};
+
+var hitChance = function hitChance(maxAttackRoll, maxDefenceRoll) {
+  if (maxAttackRoll > maxDefenceRoll) {
+    return Number((1 - (maxDefenceRoll + 2) / (2 * (maxAttackRoll + 1))).toFixed(11));
+  } else {
+    return Number((maxAttackRoll / (2 * maxDefenceRoll + 1)).toFixed(11));
+  }
+};
+
+var damagePerSecond = function damagePerSecond(hitChance, maxHit, attackInterval) {
+  return Number((hitChance * (maxHit / 2) / attackInterval).toFixed(11));
+};
+
+module.exports = {
+  effectiveLevel: effectiveLevel,
+  potionBoost: potionBoost,
+  maxHit: maxHit,
+  maxAttackRoll: maxAttackRoll,
+  maxDefenceRoll: maxDefenceRoll,
+  hitChance: hitChance,
+  damagePerSecond: damagePerSecond
+};
 
 /***/ }),
 
@@ -66810,6 +66986,18 @@ if (false) {} else {
 /******/ 	// It's empty as some runtime module handles the default behavior
 /******/ 	__webpack_require__.x = x => {};
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports

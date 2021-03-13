@@ -13,5 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .copy('resources/js/utils', 'public/js/utils')
-    .js('resources/js/components/App.jsx', 'public/js/components/App.js').react()
     .sass('resources/sass/app.scss', 'public/css');
+    
+mix.js('resources/js/CV.jsx', 'public/js/CV.js')
+    .js('resources/js/components/CombatVisualizer.jsx', 'public/js/components')
+    .react()

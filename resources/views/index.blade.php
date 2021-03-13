@@ -22,6 +22,6 @@
     </head>
     <body class="antialiased">
     <div id="content" style="text-align: center;"></div>
-        <script src="/js/components/App.js"></script>
+        <script src="/js/CV.js"></script>
     </body>
 </html>
