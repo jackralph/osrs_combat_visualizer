@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/CV.js": "/js/CV.js",
+    "/js/components/CombatVisualizer.js": "/js/components/CombatVisualizer.js",
     "/css/app.css": "/css/app.css",
     "/js/utils/combat-calc.js": "/js/utils/combat-calc.js"
 }
