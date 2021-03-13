@@ -46,17 +46,17 @@ const CombatVisualizer = () => {
     const [playerMaxAttackRoll, setPlayerMaxAttackRoll] = useState(
         maxAttackRoll(playerAttackLevel, playerAttackEquipmentBonus, playerAttackSetBonus)
     )
-
-    const [monsterMaxDefenceRoll, setMonsterMaxDefenceRoll] = useState(
-        maxDefenceRoll(effectiveLevel(135, 0, 1, 1), 20)
-    )
     
     const [playerHitChance, setPlayerHitChance] = useState(
         hitChance(playerMaxAttackRoll, monsterMaxDefenceRoll)
     )
-
+        
     const [playerDamagePerSecond, setPlayerDamagePerSecond] = useState(
         damagePerSecond(playerHitChance, playerMaxHit, playerAttackSpeed)
+    )
+            
+    const [monsterMaxDefenceRoll, setMonsterMaxDefenceRoll] = useState(
+        maxDefenceRoll(effectiveLevel(135, 0, 1, 1), 20)
     )
 
     return (

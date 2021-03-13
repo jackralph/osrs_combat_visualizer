@@ -2055,20 +2055,20 @@ var CombatVisualizer = function CombatVisualizer() {
       playerMaxAttackRoll = _useState36[0],
       setPlayerMaxAttackRoll = _useState36[1];
 
-  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxDefenceRoll)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(135, 0, 1, 1), 20)),
+  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.hitChance)(playerMaxAttackRoll, monsterMaxDefenceRoll)),
       _useState38 = _slicedToArray(_useState37, 2),
-      monsterMaxDefenceRoll = _useState38[0],
-      setMonsterMaxDefenceRoll = _useState38[1];
+      playerHitChance = _useState38[0],
+      setPlayerHitChance = _useState38[1];
 
-  var _useState39 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.hitChance)(playerMaxAttackRoll, monsterMaxDefenceRoll)),
+  var _useState39 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.damagePerSecond)(playerHitChance, playerMaxHit, playerAttackSpeed)),
       _useState40 = _slicedToArray(_useState39, 2),
-      playerHitChance = _useState40[0],
-      setPlayerHitChance = _useState40[1];
+      playerDamagePerSecond = _useState40[0],
+      setPlayerDamagePerSecond = _useState40[1];
 
-  var _useState41 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.damagePerSecond)(playerHitChance, playerMaxHit, playerAttackSpeed)),
+  var _useState41 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxDefenceRoll)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(135, 0, 1, 1), 20)),
       _useState42 = _slicedToArray(_useState41, 2),
-      playerDamagePerSecond = _useState42[0],
-      setPlayerDamagePerSecond = _useState42[1];
+      monsterMaxDefenceRoll = _useState42[0],
+      setMonsterMaxDefenceRoll = _useState42[1];
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
