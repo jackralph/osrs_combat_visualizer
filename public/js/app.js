@@ -1972,24 +1972,29 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var CombatVisualizer = function CombatVisualizer() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    stats: {
+    levels: {
       attack: 1,
       strength: 1,
       range: 1,
       mage: 1
-    }
+    },
+    potions: {},
+    prayers: {},
+    equipment: {},
+    combatStyle: "melee",
+    attackStyle: "accurate"
   }),
       _useState2 = _slicedToArray(_useState, 2),
-      player = _useState2[0],
-      setPlayer = _useState2[1];
+      playerLoadout = _useState2[0],
+      setPlayerLoadout = _useState2[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    console.log(player);
-  }, [player]);
+    console.log(playerLoadout);
+  }, [playerLoadout]);
 
   var setNewStats = function setNewStats() {
-    setPlayer(_objectSpread(_objectSpread({}, player), {}, {
-      stats: _objectSpread(_objectSpread({}, player.stats), {}, {
+    setPlayerLoadout(_objectSpread(_objectSpread({}, playerLoadout), {}, {
+      stats: _objectSpread(_objectSpread({}, playerLoadout.stats), {}, {
         attack: 5
       })
     }));

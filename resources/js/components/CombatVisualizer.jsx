@@ -11,23 +11,39 @@ import {
 
 const CombatVisualizer = () => {
 
-    const [player, setPlayer] = useState(
+    const [playerLoadout, setPlayerLoadout] = useState(
         {
-            stats: {
+            levels: {
                 attack: 1,
                 strength: 1,
                 range: 1,
                 mage: 1,
-            }
+            },
+            
+            potions: {
+
+            },
+
+            prayers: {
+
+            },
+
+            equipment: {
+
+            },
+            
+            combatStyle: "melee",
+
+            attackStyle: "accurate"
         }
     )
 
     useEffect(() => {
-        console.log(player);
-    }, [player]);
+        console.log(playerLoadout);
+    }, [playerLoadout]);
 
     const setNewStats = () => {
-        setPlayer({...player, stats: {...player.stats, attack: 5}})
+        setPlayerLoadout({...playerLoadout, stats: {...playerLoadout.stats, attack: 5}})
     }
 
     return (
