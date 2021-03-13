@@ -1948,6 +1948,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/combat-calc */ "./resources/js/utils/combat-calc.js");
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1965,127 +1971,35 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var CombatVisualizer = function CombatVisualizer() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    stats: {
+      attack: 1,
+      strength: 1,
+      range: 1,
+      mage: 1
+    }
+  }),
       _useState2 = _slicedToArray(_useState, 2),
-      playerAttackLevel = _useState2[0],
-      setPlayerAttackLevel = _useState2[1];
+      player = _useState2[0],
+      setPlayer = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-      _useState4 = _slicedToArray(_useState3, 2),
-      playerAttackPotionEffect = _useState4[0],
-      setPlayerAttackPotionEffect = _useState4[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    console.log(player);
+  }, [player]);
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
-      _useState6 = _slicedToArray(_useState5, 2),
-      playerAttackPrayerEffect = _useState6[0],
-      setPlayerAttackPrayerEffect = _useState6[1];
+  var setNewStats = function setNewStats() {
+    setPlayer(_objectSpread(_objectSpread({}, player), {}, {
+      stats: _objectSpread(_objectSpread({}, player.stats), {}, {
+        attack: 5
+      })
+    }));
+  };
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(3),
-      _useState8 = _slicedToArray(_useState7, 2),
-      playerAttackCombatStyleEffect = _useState8[0],
-      setPlayerAttackCombatStyleEffect = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-      _useState10 = _slicedToArray(_useState9, 2),
-      playerAttackEquipmentBonus = _useState10[0],
-      setPlayerAttackEquipmentBonus = _useState10[1];
-
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
-      _useState12 = _slicedToArray(_useState11, 2),
-      playerAttackSetBonus = _useState12[0],
-      setPlayerAttackSetBonus = _useState12[1];
-
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
-      _useState14 = _slicedToArray(_useState13, 2),
-      playerStrengthLevel = _useState14[0],
-      setPlayerStrengthLevel = _useState14[1];
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-      _useState16 = _slicedToArray(_useState15, 2),
-      playerStrengthPotionEffect = _useState16[0],
-      setPlayerStrengthPotionEffect = _useState16[1];
-
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
-      _useState18 = _slicedToArray(_useState17, 2),
-      playerStrengthPrayerEffect = _useState18[0],
-      setPlayerStrengthPrayerEffect = _useState18[1];
-
-  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-      _useState20 = _slicedToArray(_useState19, 2),
-      playerStrengthCombatStyleEffect = _useState20[0],
-      setPlayerStrengthCombatStyleEffect = _useState20[1];
-
-  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-      _useState22 = _slicedToArray(_useState21, 2),
-      playerStrengthEquipmentBonus = _useState22[0],
-      setPlayerStrengthEquipmentBonus = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
-      _useState24 = _slicedToArray(_useState23, 2),
-      playerStrengthSetBonus = _useState24[0],
-      setPlayerStrengthSetBonus = _useState24[1];
-
-  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState26 = _slicedToArray(_useState25, 2),
-      playerVoidSet = _useState26[0],
-      setPlayerVoidSet = _useState26[1];
-
-  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(2.4),
-      _useState28 = _slicedToArray(_useState27, 2),
-      playerAttackSpeed = _useState28[0],
-      setPlayerAttackSpeed = _useState28[1];
-
-  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(playerAttackLevel, playerAttackPotionEffect, playerAttackPrayerEffect, playerAttackCombatStyleEffect)),
-      _useState30 = _slicedToArray(_useState29, 2),
-      playerEffectiveAttackLevel = _useState30[0],
-      setPlayerEffectiveAttackLevel = _useState30[1];
-
-  var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(playerStrengthLevel, playerStrengthPotionEffect, playerStrengthPrayerEffect, playerStrengthCombatStyleEffect)),
-      _useState32 = _slicedToArray(_useState31, 2),
-      playerEffectiveStrengthLevel = _useState32[0],
-      setPlayerEffectiveStrengthLevel = _useState32[1];
-
-  var _useState33 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxHit)(playerEffectiveStrengthLevel, playerStrengthEquipmentBonus, playerStrengthSetBonus, playerVoidSet)),
-      _useState34 = _slicedToArray(_useState33, 2),
-      playerMaxHit = _useState34[0],
-      setPlayerMaxHit = _useState34[1];
-
-  var _useState35 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxAttackRoll)(playerAttackLevel, playerAttackEquipmentBonus, playerAttackSetBonus)),
-      _useState36 = _slicedToArray(_useState35, 2),
-      playerMaxAttackRoll = _useState36[0],
-      setPlayerMaxAttackRoll = _useState36[1];
-
-  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.hitChance)(playerMaxAttackRoll, monsterMaxDefenceRoll)),
-      _useState38 = _slicedToArray(_useState37, 2),
-      playerHitChance = _useState38[0],
-      setPlayerHitChance = _useState38[1];
-
-  var _useState39 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.damagePerSecond)(playerHitChance, playerMaxHit, playerAttackSpeed)),
-      _useState40 = _slicedToArray(_useState39, 2),
-      playerDamagePerSecond = _useState40[0],
-      setPlayerDamagePerSecond = _useState40[1];
-
-  var _useState41 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.maxDefenceRoll)((0,_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__.effectiveLevel)(135, 0, 1, 1), 20)),
-      _useState42 = _slicedToArray(_useState41, 2),
-      monsterMaxDefenceRoll = _useState42[0],
-      setMonsterMaxDefenceRoll = _useState42[1];
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Effective Attack Level: ", playerEffectiveAttackLevel]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Effective Strength Level: ", playerEffectiveStrengthLevel]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Max Hit: ", playerMaxHit]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Max Attack Roll: ", playerMaxAttackRoll]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Monster Max Defence Roll: ", monsterMaxDefenceRoll]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["Hit Chance: ", playerHitChance]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-      children: ["DPS: ", playerDamagePerSecond]
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+      onClick: setNewStats,
+      children: "Set new stats"
+    })
   });
 };
 
