@@ -12,7 +12,7 @@ class Prayer extends Model
     public $timestamps = FALSE;
 
     protected $fillable = [
-        'id',
+        'prayer_id',
         'name',
         'members',
         'description',

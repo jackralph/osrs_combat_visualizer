@@ -18,7 +18,7 @@ class PrayersTableSeeder extends Seeder
 
         foreach($prayers as $prayer) {
             Prayer::create(array(
-                'id' => $prayer->id,
+                'prayer_id' => $prayer->id,
                 'name' => $prayer->name,
                 'members' => $prayer->members,
                 'description' => $prayer->description,

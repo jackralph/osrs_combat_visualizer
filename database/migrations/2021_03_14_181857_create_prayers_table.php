@@ -14,7 +14,8 @@ class CreatePrayersTable extends Migration
     public function up()
     {
         Schema::create('prayers', function (Blueprint $table) {
-            $table->integer('id')->nullable();
+            $table->increments('id');
+            $table->integer('prayer_id');
             $table->string('name');
             $table->boolean('members');
             $table->string('description');
