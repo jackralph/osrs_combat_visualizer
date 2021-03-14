@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             PrayersTableSeeder::class,
             WeaponsTableSeeder::class,
             AmmunitionTableSeeder::class,
-            BodiesTableSeeder::class
+            BodiesTableSeeder::class,
+            CapesTableSeeder::class
         ]);
     }
 }
