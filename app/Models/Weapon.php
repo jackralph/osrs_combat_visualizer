@@ -12,7 +12,7 @@ class Weapon extends Model
     public $timestamps = FALSE;
 
     protected $fillable = [
-        'weapon_id',
+        'item_id',
         'name',
         'last_updated',
         'incomplete',

@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PrayersTableSeeder::class,
             WeaponsTableSeeder::class,
-            AmmunitionTableSeeder::class
+            AmmunitionTableSeeder::class,
+            BodiesTableSeeder::class
         ]);
     }
 }
