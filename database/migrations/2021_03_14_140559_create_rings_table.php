@@ -14,7 +14,8 @@ class CreateRingsTable extends Migration
     public function up()
     {
         Schema::create('rings', function (Blueprint $table) {
-            $table->integer('id')->unique();
+            $table->increments('id');
+            $table->integer('item_id');
             $table->string('name');
             $table->string('last_updated');
             $table->boolean('incomplete');
@@ -25,8 +26,8 @@ class CreateRingsTable extends Migration
             $table->boolean('stacked')->nullable();
             $table->boolean('noted');
             $table->boolean('noteable');
-            $table->boolean('linked_id_item')->nullable();
-            $table->boolean('linked_id_noted')->nullable();
+            $table->integer('linked_id_item')->nullable();
+            $table->integer('linked_id_noted')->nullable();
             $table->integer('linked_id_placeholder')->nullable();
             $table->boolean('placeholder');
             $table->boolean('equipable');
@@ -41,7 +42,7 @@ class CreateRingsTable extends Migration
             $table->string("release_date")->nullable();
             $table->boolean("duplicate");
             $table->string("examine")->nullable();
-            $table->string("icon");
+            $table->text("icon");
             $table->string("wiki_name")->nullable();
             $table->string("wiki_url")->nullable();
             $table->text("equipment")->nullable();

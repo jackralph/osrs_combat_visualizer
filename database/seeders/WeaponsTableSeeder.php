@@ -20,7 +20,7 @@ class WeaponsTableSeeder extends Seeder
 
         foreach($weapons as $weapon) {
             Weapon::create(array(
-                'weapon_id' => $weapon->id,
+                'item_id' => $weapon->id,
                 'name' => $weapon->name,
                 'last_updated' => $weapon->last_updated,
                 'incomplete' => $weapon->incomplete,
@@ -58,7 +58,7 @@ class WeaponsTableSeeder extends Seeder
 
         foreach($weapons_2h as $weapon_2h) {
             Weapon::create(array(
-                'weapon_id' => $weapon_2h->id,
+                'item_id' => $weapon_2h->id,
                 'name' => $weapon_2h->name,
                 'last_updated' => $weapon_2h->last_updated,
                 'incomplete' => $weapon_2h->incomplete,
