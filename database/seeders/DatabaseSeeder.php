@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             BodySlotsTableSeeder::class,
             CapeSlotsTableSeeder::class,
             FootSlotsTableSeeder::class,
-            HandSlotsTableSeeder::class
+            HandSlotsTableSeeder::class,
+            LegSlotsTableSeeder::class
         ]);
     }
 }
