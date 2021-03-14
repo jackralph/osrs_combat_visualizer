@@ -14,8 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PrayersTableSeeder::class,
-            WeaponSlotsTableSeeder::class,
             AmmoSlotsTableSeeder::class,
             BodySlotsTableSeeder::class,
             CapeSlotsTableSeeder::class,
@@ -23,7 +21,10 @@ class DatabaseSeeder extends Seeder
             HandSlotsTableSeeder::class,
             LegSlotsTableSeeder::class,
             NeckSlotsTableSeeder::class,
-            RingSlotsTableSeeder::class
+            PrayersTableSeeder::class,
+            RingSlotsTableSeeder::class,
+            ShieldSlotsTableSeeder::class,
+            WeaponSlotsTableSeeder::class,
         ]);
     }
 }
