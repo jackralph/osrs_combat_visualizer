@@ -31,7 +31,13 @@
         "wiki_name": "Attack potion (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Attack_potion#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "attack": {
+                "levelBoost":3,
+                "percentageMultiplier":1.1
+            }
+        }
     },
     "2436":{
         "id": 2436,
@@ -65,7 +71,13 @@
         "wiki_name": "Super attack (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Super_attack#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "attack": {
+                "levelBoost":5,
+                "percentageMultiplier":1.15
+            }
+        }
     },
     "113":{
         "id": 113,
@@ -99,7 +111,13 @@
         "wiki_name": "Strength potion (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Strength_potion#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "strength": {
+                "levelBoost":3,
+                "percentageMultiplier":1.1
+            }
+        }
     },
     "2440":{
         "id": 2440,
@@ -133,7 +151,13 @@
         "wiki_name": "Super strength (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Super_strength#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "strength": {
+                "levelBoost":5,
+                "percentageMultiplier":1.15
+            }
+        }
     },
     "20996":{
         "id": 20996,
@@ -167,7 +191,17 @@
         "wiki_name": "Overload (+) (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Overload_(+)#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "attack": {
+                "levelBoost":6,
+                "percentageMultiplier":1.16
+            },
+            "strength": {
+                "levelBoost":6,
+                "percentageMultiplier":1.16
+            }
+        }
     },
     "2444":{
         "id": 2444,
@@ -201,7 +235,13 @@
         "wiki_name": "Ranging potion (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Ranging_potion#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "range": {
+                "levelBoost":4,
+                "percentageMultiplier":1.1
+            }
+        }
     },
     "3040":{
         "id": 3040,
@@ -235,7 +275,13 @@
         "wiki_name": "Magic potion (4 dose)",
         "wiki_url": "https://oldschool.runescape.wiki/w/Magic_potion#4_dose",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "magic": {
+                "levelBoost":4,
+                "percentageMultiplier":1
+            }
+        }
     },
     "20724":{
         "id": 20724,
@@ -269,6 +315,12 @@
         "wiki_name": "Imbued heart",
         "wiki_url": "https://oldschool.runescape.wiki/w/Imbued_heart",
         "equipment": null,
-        "weapon": null
+        "weapon": null,
+        "bonuses":{
+            "magic": {
+                "levelBoost":1,
+                "percentageBoost":1.1
+            }
+        }
     }
 }
