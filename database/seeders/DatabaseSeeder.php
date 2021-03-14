@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             WeaponsTableSeeder::class,
             AmmunitionTableSeeder::class,
             BodiesTableSeeder::class,
-            CapesTableSeeder::class
+            CapesTableSeeder::class,
+            FeetTableSeeder::class,
         ]);
     }
 }
