@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRingsTable extends Migration
+class CreateCapeSlotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rings', function (Blueprint $table) {
+        Schema::create('cape_slots', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id');
             $table->string('name');
@@ -57,6 +57,6 @@ class CreateRingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rings');
+        Schema::dropIfExists('cape_slots');
     }
 }

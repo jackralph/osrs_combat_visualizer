@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Feet extends Model
+class BodySlot extends Model
 {
     use HasFactory;
-
-    protected $table = 'feet';
 
     public $timestamps = FALSE;
 

@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ammunition extends Model
+class AmmoSlot extends Model
 {
     use HasFactory;
-
-    protected $table = 'ammunition';
 
     public $timestamps = FALSE;
 

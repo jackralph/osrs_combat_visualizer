@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHandsTable extends Migration
+class CreateLegSlotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateHandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hands', function (Blueprint $table) {
+        Schema::create('leg_slots', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id');
             $table->string('name');
@@ -57,6 +57,6 @@ class CreateHandsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hands');
+        Schema::dropIfExists('leg_slots');
     }
 }

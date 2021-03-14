@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCapesTable extends Migration
+class CreateHandSlotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCapesTable extends Migration
      */
     public function up()
     {
-        Schema::create('capes', function (Blueprint $table) {
+        Schema::create('hand_slots', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id');
             $table->string('name');
@@ -57,6 +57,6 @@ class CreateCapesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('capes');
+        Schema::dropIfExists('hand_slots');
     }
 }

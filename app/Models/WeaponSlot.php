@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cape extends Model
+class WeaponSlot extends Model
 {
     use HasFactory;
 
@@ -43,6 +43,7 @@ class Cape extends Model
         'wiki_name',
         'wiki_url',
         'equipment',
-        'weapon'
+        'weapon',
+        'two_handed'
     ];
 }

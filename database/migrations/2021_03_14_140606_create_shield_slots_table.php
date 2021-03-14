@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNecksTable extends Migration
+class CreateShieldSlotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateNecksTable extends Migration
      */
     public function up()
     {
-        Schema::create('necks', function (Blueprint $table) {
+        Schema::create('shield_slots', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id');
             $table->string('name');
@@ -57,6 +57,6 @@ class CreateNecksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('necks');
+        Schema::dropIfExists('shield_slots');
     }
 }

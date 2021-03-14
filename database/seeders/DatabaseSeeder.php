@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             PrayersTableSeeder::class,
-            WeaponsTableSeeder::class,
-            AmmunitionTableSeeder::class,
-            BodiesTableSeeder::class,
-            CapesTableSeeder::class,
-            FeetTableSeeder::class,
+            WeaponSlotsTableSeeder::class,
+            AmmoSlotsTableSeeder::class,
+            BodySlotsTableSeeder::class,
+            CapeSlotsTableSeeder::class,
+            FootSlotsTableSeeder::class,
         ]);
     }
 }
