@@ -5,16 +5,11 @@
     "/css/app.css": "/css/app.css",
     "/js/utils/combat-calc.js": "/js/utils/combat-calc.js",
     "/images/Combat_icon.png": "/images/Combat_icon.png",
-    "/images/Inventory.png": "/images/Inventory.png",
+    "/images/Inventory_icon.png": "/images/Inventory_icon.png",
+    "/images/Monster_examine_icon.png": "/images/Monster_examine_icon.png",
     "/images/Prayer_tab_icon.png": "/images/Prayer_tab_icon.png",
     "/images/Quest_point_icon.png": "/images/Quest_point_icon.png",
     "/images/Skills_icon.png": "/images/Skills_icon.png",
-    "/images/Spellbook.png": "/images/Spellbook.png",
-    "/images/Worn_equipment.png": "/images/Worn_equipment.png",
-    "/images/Monster_Examine_icon.png": "/images/Monster_Examine_icon.png",
-    "/images/Monster_Examine.png": "/images/Monster_Examine.png",
     "/images/Spellbook_icon.png": "/images/Spellbook_icon.png",
-    "/images/Worn_equipment_icon.png": "/images/Worn_equipment_icon.png",
-    "/images/Inventory_icon.png": "/images/Inventory_icon.png",
-    "/images/Monster_examine_icon.png": "/images/Monster_examine_icon.png"
+    "/images/Worn_equipment_icon.png": "/images/Worn_equipment_icon.png"
 }
