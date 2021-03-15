@@ -38,17 +38,17 @@ const CombatVisualizer = () => {
         }
     )
 
-    useEffect(() => {
-        console.log(playerLoadout);
-    }, [playerLoadout]);
-
-    const setNewStats = () => {
-        setPlayerLoadout({...playerLoadout, stats: {...playerLoadout.stats, attack: 5}})
-    }
-
     return (
-        <div>
-            <button onClick={setNewStats}>Set new stats</button>
+        <div className="container">
+            <div className="row text-center">
+                <div className="col p-1"><img src="/images/Combat_icon.png" alt="Combat Icon"/></div>
+                <div className="col p-1"><img src="/images/Skills_icon.png" alt="Skills Icon"/></div>
+                <div className="col p-1"><img src="/images/Monster_examine_icon.png" alt="Monster Examine Icon"/></div>
+                <div className="col p-1"><img src="/images/Inventory_icon.png" alt="Inventory Icon"/></div>
+                <div className="col p-1"><img src="/images/Worn_equipment_icon.png" alt="Worn Equipment Icon"/></div>
+                <div className="col p-1"><img src="/images/Prayer_tab_icon.png" alt="Prayer Tab Icon"/></div>
+                <div className="col p-1"><img src="/images/Spellbook_icon.png" alt="Spellbook Icon"/></div>
+            </div>
         </div>
     );
 };
