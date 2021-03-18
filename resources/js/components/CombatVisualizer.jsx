@@ -10,6 +10,7 @@ import {
 } from '../utils/combat-calc';
 import InventoryTabs from './interface/elements/InventoryTabs';
 import Inventory from './interface/menus/inventory';
+import Prayers from './interface/menus/Prayers';
 
 const CombatVisualizer = () => {
 
@@ -51,7 +52,7 @@ const CombatVisualizer = () => {
                 currentTab === "levels" ? <p>levels</p> :
                 currentTab === "monsters" ? <p>monsters</p> :
                 currentTab === "equipment" ? <p>equipment</p> :
-                currentTab === "prayers" ? <p>prayers</p> :
+                currentTab === "prayers" ? <Prayers /> :
                 <p>spellbook</p>
             }
         </div>

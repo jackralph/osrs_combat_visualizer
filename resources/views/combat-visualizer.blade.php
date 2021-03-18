@@ -26,6 +26,7 @@
         
         <script>
             const potions = {!! json_encode($potions) !!}
+            const prayers = {!! json_encode($prayers) !!}
         </script>
 
         <div id="content"></div>
