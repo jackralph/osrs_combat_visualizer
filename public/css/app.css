@@ -10005,13 +10005,12 @@ h3 {
 .interface {
   text-align: center;
 }
-
-.interface__tab-container {
+.interface .interface__tab-container {
   border: solid;
   border-radius: 5px;
   cursor: pointer;
 }
-.interface__tab-container img {
+.interface .interface__tab-container img {
   padding: 5px;
   height: 40px;
   width: 37px;
