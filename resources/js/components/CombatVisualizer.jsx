@@ -54,7 +54,7 @@ const CombatVisualizer = () => {
                 currentTab === "monsters" ? <p>monsters</p> :
                 currentTab === "equipment" ? <Equipment /> :
                 currentTab === "prayers" ? <Prayers /> :
-                <p>spellbook</p>
+                <p>Run</p>
             }
         </div>
     );

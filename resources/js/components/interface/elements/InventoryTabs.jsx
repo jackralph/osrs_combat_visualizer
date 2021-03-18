@@ -31,8 +31,8 @@ const InventoryTabs = ({currentTab, setCurrentTab}) => {
             <div className={containerClasses("prayers")}>
                 <img src="/icons/tab-icons/Prayer_tab_icon.png" alt="Prayer Tab Icon" data-tab-name="prayers" onClick={handleTabClick}/>
             </div>
-            <div className={containerClasses("spellbook")}>
-                <img src="/icons/tab-icons/Spellbook_icon.png" alt="Spellbook Icon" data-tab-name="spellbook" onClick={handleTabClick}/>
+            <div className={containerClasses("run")}>
+                <img src="/icons/tab-icons/Transportation_icon.png" alt="Transportation Icon" data-tab-name="run" onClick={handleTabClick}/>
             </div>
         </div>
     );

@@ -2008,7 +2008,7 @@ var CombatVisualizer = function CombatVisualizer() {
     }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "monsters"
     }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_Equipment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_5__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-      children: "spellbook"
+      children: "Run"
     })]
   });
 };
@@ -2101,11 +2101,11 @@ var InventoryTabs = function InventoryTabs(_ref) {
         onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: containerClasses("spellbook"),
+      className: containerClasses("run"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/icons/tab-icons/Spellbook_icon.png",
-        alt: "Spellbook Icon",
-        "data-tab-name": "spellbook",
+        src: "/icons/tab-icons/Transportation_icon.png",
+        alt: "Transportation Icon",
+        "data-tab-name": "run",
         onClick: handleTabClick
       })
     })]
