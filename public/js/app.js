@@ -1974,7 +1974,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var CombatVisualizer = function CombatVisualizer() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("equipment"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("inventory"),
       _useState2 = _slicedToArray(_useState, 2),
       currentTab = _useState2[0],
       setCurrentTab = _useState2[1];
@@ -1999,7 +1999,8 @@ var CombatVisualizer = function CombatVisualizer() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "container",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__.default, {
-      setCurrentTab: setCurrentTab
+      setCurrentTab: setCurrentTab,
+      currentTab: currentTab
     }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_inventory__WEBPACK_IMPORTED_MODULE_4__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "combat style"
     }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
@@ -2037,70 +2038,75 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var InventoryTabs = function InventoryTabs(_ref) {
-  var setCurrentTab = _ref.setCurrentTab;
+  var currentTab = _ref.currentTab,
+      setCurrentTab = _ref.setCurrentTab;
 
   var handleTabClick = function handleTabClick(_ref2) {
     var tabName = _ref2.target.dataset.tabName;
     setCurrentTab(tabName);
   };
 
+  var containerClasses = function containerClasses(tabName) {
+    return currentTab === tabName ? "col p-0 interface__tab-container" : "col p-0 interface__tab-container grayscale";
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "row mb-3 interface",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "combat_styles",
-      onClick: handleTabClick,
+      className: containerClasses("combat_styles"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Combat_icon.png",
-        alt: "Combat Icon"
+        alt: "Combat Icon",
+        "data-tab-name": "combat_styles",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "levels",
-      onClick: handleTabClick,
+      className: containerClasses("levels"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Skills_icon.png",
-        alt: "Skills Icon"
+        alt: "Skills Icon",
+        "data-tab-name": "levels",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "monsters",
-      onClick: handleTabClick,
+      className: containerClasses("monsters"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Monster_examine_icon.png",
-        alt: "Monster Examine Icon"
+        alt: "Monster Examine Icon",
+        "data-tab-name": "monsters",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "inventory",
-      onClick: handleTabClick,
+      className: containerClasses("inventory"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Inventory_icon.png",
-        alt: "Inventory Icon"
+        alt: "Inventory Icon",
+        "data-tab-name": "inventory",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "equipment",
-      onClick: handleTabClick,
+      className: containerClasses("equipment"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Worn_equipment_icon.png",
-        alt: "Worn Equipment Icon"
+        alt: "Worn Equipment Icon",
+        "data-tab-name": "equipment",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "prayers",
-      onClick: handleTabClick,
+      className: containerClasses("prayers"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Prayer_tab_icon.png",
-        alt: "Prayer Tab Icon"
+        alt: "Prayer Tab Icon",
+        "data-tab-name": "prayers",
+        onClick: handleTabClick
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "col p-0 interface__tab-container",
-      "data-tab-name": "spellbook",
-      onClick: handleTabClick,
+      className: containerClasses("spellbook"),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: "/icons/tab-icons/Spellbook_icon.png",
-        alt: "Spellbook Icon"
+        alt: "Spellbook Icon",
+        "data-tab-name": "spellbook",
+        onClick: handleTabClick
       })
     })]
   });
@@ -2129,83 +2135,83 @@ __webpack_require__.r(__webpack_exports__);
 
 var Equipment = function Equipment() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    "class": "container equipment",
+    className: "container equipment",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      "class": "row text-center pb-1",
+      className: "row text-center pb-1",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col",
+        className: "col",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Head_slot.png",
           alt: "Head slot"
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      "class": "row justify-content-center pb-1",
+      className: "row justify-content-center pb-1",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Cape_slot.png",
           alt: "Cape slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Neck_slot.png",
           alt: "Neck slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Ammo_slot.png",
           alt: "Ammo slot"
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      "class": "row justify-content-center pb-1",
+      className: "row justify-content-center pb-1",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Weapon_slot.png",
           alt: "Weapon slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Body_slot.png",
           alt: "Body slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Shield_slot.png",
           alt: "Shield slot"
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      "class": "row text-center pb-1",
+      className: "row text-center pb-1",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col",
+        className: "col",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Legs_slot.png",
           alt: "Legs slot"
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      "class": "row justify-content-center",
+      className: "row justify-content-center",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Hands_slot.png",
           alt: "Hands slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Feet_slot.png",
           alt: "Feet slot"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        "class": "col-3 p-0 text-center",
+        className: "col-3 p-0 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Ring_slot.png",
           alt: "Ring slot"

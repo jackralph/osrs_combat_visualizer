@@ -15,7 +15,7 @@ import Prayers from './interface/menus/Prayers';
 
 const CombatVisualizer = () => {
 
-    const [currentTab, setCurrentTab] = useState("equipment");
+    const [currentTab, setCurrentTab] = useState("inventory");
 
     const [playerLoadout, setPlayerLoadout] = useState(
         {
@@ -46,9 +46,9 @@ const CombatVisualizer = () => {
 
     return (
         <div className="container">
-            <InventoryTabs setCurrentTab={setCurrentTab}/>
+            <InventoryTabs setCurrentTab={setCurrentTab} currentTab={currentTab}/>
             {
-                currentTab === "inventory" ? <Inventory /> : 
+                currentTab === "inventory" ? <Inventory/> : 
                 currentTab === "combat_styles" ? <p>combat style</p> :
                 currentTab === "levels" ? <p>levels</p> :
                 currentTab === "monsters" ? <p>monsters</p> :

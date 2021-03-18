@@ -30,7 +30,9 @@
         </script>
 
         <div id="content"></div>
-
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script src="/js/CV.js"></script>
+        <script src="/js/utils/inventory-tabs.js"></script>
     </body>
 </html>

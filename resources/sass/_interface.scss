@@ -1,20 +1,25 @@
+// Inventory Tabs
+
 .interface {
     text-align: center;
 
     .interface__tab-container {
-        border: solid;
-        border-radius: 5px;
-        cursor: pointer;
-
         img {
-            padding: 5px;
+            padding: 2px;
             height: 40px;
-            width: 37px;
-            position: relative;
-            z-index: -1;
+            width: 40px;
+            cursor: pointer;
         }
     }
 }
+
+.grayscale {
+    img {
+        filter: grayscale(100%);
+    }
+}
+
+// Equipment
 
 .container .equipment {
     max-width: 400px;

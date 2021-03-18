@@ -10005,17 +10005,15 @@ h3 {
 .interface {
   text-align: center;
 }
-.interface .interface__tab-container {
-  border: solid;
-  border-radius: 5px;
+.interface .interface__tab-container img {
+  padding: 2px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
 }
-.interface .interface__tab-container img {
-  padding: 5px;
-  height: 40px;
-  width: 37px;
-  position: relative;
-  z-index: -1;
+
+.grayscale img {
+  filter: grayscale(100%);
 }
 
 .container .equipment {
