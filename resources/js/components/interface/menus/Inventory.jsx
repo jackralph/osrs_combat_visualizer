@@ -8,7 +8,7 @@ const Inventory = () => {
                     return (
                         <React.Fragment key={potion.id}>
                             <div className="col p-1">
-                                <img src={`icons/items-icons/${potion.item_id}.png`} alt={potion.name}/>
+                                <img src={`/icons/items-icons/${potion.item_id}.png`} alt={potion.name}/>
                             </div>
                             <div className="w-100 mb-3"></div>
                         </React.Fragment>
@@ -16,7 +16,7 @@ const Inventory = () => {
                 }
                 return (
                     <div className="col p-1" key={potion.id}>
-                        <img src={`icons/items-icons/${potion.item_id}.png`} alt={potion.name}/>
+                        <img src={`/icons/items-icons/${potion.item_id}.png`} alt={potion.name}/>
                     </div>
                 )
             })}

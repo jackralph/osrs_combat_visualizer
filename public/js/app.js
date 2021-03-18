@@ -1948,9 +1948,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/combat-calc */ "./resources/js/utils/combat-calc.js");
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interface/elements/InventoryTabs */ "./resources/js/components/interface/elements/InventoryTabs.jsx");
-/* harmony import */ var _interface_menus_inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/inventory */ "./resources/js/components/interface/menus/inventory.jsx");
-/* harmony import */ var _interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/Prayers */ "./resources/js/components/interface/menus/Prayers.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _interface_menus_Equipment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/Equipment */ "./resources/js/components/interface/menus/Equipment.jsx");
+/* harmony import */ var _interface_menus_inventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/inventory */ "./resources/js/components/interface/menus/inventory.jsx");
+/* harmony import */ var _interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/Prayers */ "./resources/js/components/interface/menus/Prayers.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1971,8 +1972,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var CombatVisualizer = function CombatVisualizer() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("inventory"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("equipment"),
       _useState2 = _slicedToArray(_useState, 2),
       currentTab = _useState2[0],
       setCurrentTab = _useState2[1];
@@ -1994,19 +1996,17 @@ var CombatVisualizer = function CombatVisualizer() {
       playerLoadout = _useState4[0],
       setPlayerLoadout = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__.default, {
       setCurrentTab: setCurrentTab
-    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_interface_menus_inventory__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_inventory__WEBPACK_IMPORTED_MODULE_4__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "combat style"
-    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "levels"
-    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "monsters"
-    }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-      children: "equipment"
-    }) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_4__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+    }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_Equipment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_5__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "spellbook"
     })]
   });
@@ -2107,6 +2107,115 @@ var InventoryTabs = function InventoryTabs(_ref) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InventoryTabs);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/Equipment.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/interface/menus/Equipment.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var Equipment = function Equipment() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    "class": "container equipment",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      "class": "row text-center pb-1",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Head_slot.png",
+          alt: "Head slot"
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      "class": "row justify-content-center pb-1",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Cape_slot.png",
+          alt: "Cape slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Neck_slot.png",
+          alt: "Neck slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Ammo_slot.png",
+          alt: "Ammo slot"
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      "class": "row justify-content-center pb-1",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Weapon_slot.png",
+          alt: "Weapon slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Body_slot.png",
+          alt: "Body slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Shield_slot.png",
+          alt: "Shield slot"
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      "class": "row text-center pb-1",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Legs_slot.png",
+          alt: "Legs slot"
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      "class": "row justify-content-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Hands_slot.png",
+          alt: "Hands slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Feet_slot.png",
+          alt: "Feet slot"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        "class": "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Ring_slot.png",
+          alt: "Ring slot"
+        })
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Equipment);
 
 /***/ }),
 

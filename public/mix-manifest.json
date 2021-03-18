@@ -11,5 +11,16 @@
     "/icons/tab-icons/Quest_point_icon.png": "/icons/tab-icons/Quest_point_icon.png",
     "/icons/tab-icons/Skills_icon.png": "/icons/tab-icons/Skills_icon.png",
     "/icons/tab-icons/Spellbook_icon.png": "/icons/tab-icons/Spellbook_icon.png",
-    "/icons/tab-icons/Worn_equipment_icon.png": "/icons/tab-icons/Worn_equipment_icon.png"
+    "/icons/tab-icons/Worn_equipment_icon.png": "/icons/tab-icons/Worn_equipment_icon.png",
+    "/icons/default-equipment-icons/Ammo_slot.png": "/icons/default-equipment-icons/Ammo_slot.png",
+    "/icons/default-equipment-icons/Body_slot.png": "/icons/default-equipment-icons/Body_slot.png",
+    "/icons/default-equipment-icons/Cape_slot.png": "/icons/default-equipment-icons/Cape_slot.png",
+    "/icons/default-equipment-icons/Feet_slot.png": "/icons/default-equipment-icons/Feet_slot.png",
+    "/icons/default-equipment-icons/Hands_slot.png": "/icons/default-equipment-icons/Hands_slot.png",
+    "/icons/default-equipment-icons/Head_slot.png": "/icons/default-equipment-icons/Head_slot.png",
+    "/icons/default-equipment-icons/Legs_slot.png": "/icons/default-equipment-icons/Legs_slot.png",
+    "/icons/default-equipment-icons/Neck_slot.png": "/icons/default-equipment-icons/Neck_slot.png",
+    "/icons/default-equipment-icons/Ring_slot.png": "/icons/default-equipment-icons/Ring_slot.png",
+    "/icons/default-equipment-icons/Shield_slot.png": "/icons/default-equipment-icons/Shield_slot.png",
+    "/icons/default-equipment-icons/Weapon_slot.png": "/icons/default-equipment-icons/Weapon_slot.png"
 }
