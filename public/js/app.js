@@ -2051,7 +2051,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "combat_styles",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Combat_icon.png",
+        src: "/icons/tab-icons/Combat_icon.png",
         alt: "Combat Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2059,7 +2059,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "levels",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Skills_icon.png",
+        src: "/icons/tab-icons/Skills_icon.png",
         alt: "Skills Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2067,7 +2067,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "monsters",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Monster_examine_icon.png",
+        src: "/icons/tab-icons/Monster_examine_icon.png",
         alt: "Monster Examine Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2075,7 +2075,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "inventory",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Inventory_icon.png",
+        src: "/icons/tab-icons/Inventory_icon.png",
         alt: "Inventory Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2083,7 +2083,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "equipment",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Worn_equipment_icon.png",
+        src: "/icons/tab-icons/Worn_equipment_icon.png",
         alt: "Worn Equipment Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2091,7 +2091,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "prayers",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Prayer_tab_icon.png",
+        src: "/icons/tab-icons/Prayer_tab_icon.png",
         alt: "Prayer Tab Icon"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2099,7 +2099,7 @@ var InventoryTabs = function InventoryTabs(_ref) {
       "data-tab-name": "spellbook",
       onClick: handleTabClick,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: "/images/Spellbook_icon.png",
+        src: "/icons/tab-icons/Spellbook_icon.png",
         alt: "Spellbook Icon"
       })
     })]
