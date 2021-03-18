@@ -19,13 +19,35 @@
     }
 }
 
+// Inventory
+
+.inventory__icon {
+    img {
+        padding: 10px;
+        transform: scale(1.5);
+    }
+}
+
 // Equipment
 
 .container .equipment {
-    max-width: 400px;
-
+    .equipment__loadout {
+        max-width: 400px;
+    }
+    .equipment__stats {
+        max-width: 350px;
+    }
     img {
         height: 70px;
         width: 70px;
+    }
+}
+
+// Prayer
+
+.prayer__icon {
+    img {
+        padding: 10px;
+        transform: scale(1.5);
     }
 }

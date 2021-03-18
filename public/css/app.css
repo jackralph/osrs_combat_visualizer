@@ -10016,10 +10016,23 @@ h3 {
   filter: grayscale(100%);
 }
 
-.container .equipment {
+.inventory__icon img {
+  padding: 10px;
+  transform: scale(1.5);
+}
+
+.container .equipment .equipment__loadout {
   max-width: 400px;
+}
+.container .equipment .equipment__stats {
+  max-width: 350px;
 }
 .container .equipment img {
   height: 70px;
   width: 70px;
+}
+
+.prayer__icon img {
+  padding: 10px;
+  transform: scale(1.5);
 }
