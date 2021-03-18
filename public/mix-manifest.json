@@ -11,5 +11,6 @@
     "/images/Quest_point_icon.png": "/images/Quest_point_icon.png",
     "/images/Skills_icon.png": "/images/Skills_icon.png",
     "/images/Spellbook_icon.png": "/images/Spellbook_icon.png",
-    "/images/Worn_equipment_icon.png": "/images/Worn_equipment_icon.png"
+    "/images/Worn_equipment_icon.png": "/images/Worn_equipment_icon.png",
+    "/js/utils/inventory-tabs.js": "/js/utils/inventory-tabs.js"
 }
