@@ -19,5 +19,4 @@ mix.js('resources/js/CV.jsx', 'public/js/CV.js')
     .js('resources/js/components/CombatVisualizer.jsx', 'public/js/components')
     .react()
 
-mix.copy('resources/icons/tab-icons', 'public/icons/tab-icons')
-    .copy('resources/icons/default-equipment-icons', 'public/icons/default-equipment-icons');
+mix.copy('resources/icons', 'public/icons');

@@ -8,7 +8,7 @@ const Prayers = () => {
                     return (
                         <React.Fragment key={i}>
                             <div className="col p-1 prayer__icon">
-                                <img src={`/icons/prayers-icons/${prayer.prayer_id}.png`} alt={prayer.name}/>
+                                <img src={`data:image/png;base64, ${prayer.icon}`} alt={prayer.name}/>
                             </div>
                             <div className="w-100 mb-3"></div>
                         </React.Fragment>
@@ -16,7 +16,7 @@ const Prayers = () => {
                 }
                 return (
                     <div className="col p-1 prayer__icon" key={i}>
-                        <img src={`/icons/prayers-icons/${prayer.prayer_id}.png`} alt={prayer.name}/>
+                        <img src={`data:image/png;base64, ${prayer.icon}`} alt={prayer.name}/>
                     </div>
                 )
             })}

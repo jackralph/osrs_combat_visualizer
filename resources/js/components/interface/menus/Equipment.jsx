@@ -50,7 +50,7 @@ const Equipment = () => {
                     </div>
                 </div>
                 <div className="col-md table equipment__stats m-auto pt-4 table-responsive table-borderless">
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <thead>
                             <tr>
                                 <th scope="col">Attack bonuses</th>
@@ -80,7 +80,7 @@ const Equipment = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <thead>
                             <tr>
                                 <th scope="col">Other bonuses</th>

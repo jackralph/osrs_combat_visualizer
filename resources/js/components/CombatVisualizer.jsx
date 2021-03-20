@@ -11,11 +11,12 @@ import {
 import InventoryTabs from './interface/elements/InventoryTabs';
 import Equipment from './interface/menus/Equipment';
 import Inventory from './interface/menus/inventory';
+import Monsters from './interface/menus/Monsters';
 import Prayers from './interface/menus/Prayers';
 
 const CombatVisualizer = () => {
 
-    const [currentTab, setCurrentTab] = useState("equipment");
+    const [currentTab, setCurrentTab] = useState("monsters");
 
     const [playerLoadout, setPlayerLoadout] = useState(
         {
@@ -51,7 +52,7 @@ const CombatVisualizer = () => {
                 currentTab === "inventory" ? <Inventory/> : 
                 currentTab === "combat_styles" ? <p>combat style</p> :
                 currentTab === "levels" ? <p>levels</p> :
-                currentTab === "monsters" ? <p>monsters</p> :
+                currentTab === "monsters" ? <Monsters /> :
                 currentTab === "equipment" ? <Equipment /> :
                 currentTab === "prayers" ? <Prayers /> :
                 <p>Run</p>
