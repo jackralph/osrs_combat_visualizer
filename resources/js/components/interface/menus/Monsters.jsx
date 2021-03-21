@@ -4,19 +4,21 @@ import { Autocomplete } from '@material-ui/lab';
 
 const Monsters = () => {
 
-    const [monsterList] = useState(monsters);
+    const [monsterList, setMonsterList] = useState(monsters);
 
     return (
         <div className="container monster pt-3">
             <div className="row justify-content-md-center">
-                <div className="col-md table monster__stats m-auto pt-2 table-responsive table-borderless">
+                <div className="col-md monster__search mr-auto ml-auto pt-4 text-center">
                     <Autocomplete
                     id="combo-box-demo"
                     options={monsterList}
                     getOptionLabel={(monster) => `${monster.wiki_name} - Lvl: ${monster.combat_level}`}
-                    style={{ margin: "auto", paddingBottom: "20px" }}
+                    style={{ margin: "auto" }}
                     renderInput={(monsters) => <TextField {...monsters} label="Select monster" variant="outlined" />}
                     />
+                </div>
+                <div className="col-md table monster__stats m-auto pt-4 table-responsive table-borderless">
                     <table className="table table-sm">
                         <thead>
                             <tr>

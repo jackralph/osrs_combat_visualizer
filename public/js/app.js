@@ -21629,24 +21629,24 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Monsters = function Monsters() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(monsters),
-      _useState2 = _slicedToArray(_useState, 1),
-      monsterList = _useState2[0];
+      _useState2 = _slicedToArray(_useState, 2),
+      monsterList = _useState2[0],
+      setMonsterList = _useState2[1];
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "container monster pt-3",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "row justify-content-md-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "col-md table monster__stats m-auto pt-2 table-responsive table-borderless",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_lab__WEBPACK_IMPORTED_MODULE_2__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-md monster__search mr-auto ml-auto pt-4 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_lab__WEBPACK_IMPORTED_MODULE_2__.default, {
           id: "combo-box-demo",
           options: monsterList,
           getOptionLabel: function getOptionLabel(monster) {
             return "".concat(monster.wiki_name, " - Lvl: ").concat(monster.combat_level);
           },
           style: {
-            margin: "auto",
-            paddingBottom: "20px"
+            margin: "auto"
           },
           renderInput: function renderInput(monsters) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__.default, _objectSpread(_objectSpread({}, monsters), {}, {
@@ -21654,7 +21654,10 @@ var Monsters = function Monsters() {
               variant: "outlined"
             }));
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-md table monster__stats m-auto pt-4 table-responsive table-borderless",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
           className: "table table-sm",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -21727,8 +21730,8 @@ var Monsters = function Monsters() {
               })
             })]
           })]
-        })]
-      })
+        })
+      })]
     })
   });
 };
