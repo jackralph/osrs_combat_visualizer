@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             FootSlotsTableSeeder::class,
             HandSlotsTableSeeder::class,
             LegSlotsTableSeeder::class,
+            MonstersTableSeeder::class,
             NeckSlotsTableSeeder::class,
             PotionsTableSeeder::class,
             PrayersTableSeeder::class,
