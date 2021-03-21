@@ -22,15 +22,10 @@ class FootSlotsTableSeeder extends Seeder
                     'item_id' => $foot_slot->id,
                     'name' => $foot_slot->name,
                     'last_updated' => $foot_slot->last_updated,
-                    'equipable' => $foot_slot->equipable,
-                    'equipable_by_player' => $foot_slot->equipable_by_player,
-                    'equipable_weapon' => $foot_slot->equipable_weapon,
-                    'duplicate' => $foot_slot->duplicate,
                     'icon' => $foot_slot->icon,
                     'wiki_name' => $foot_slot->wiki_name,
                     'wiki_url' => $foot_slot->wiki_url,
                     'equipment' => json_encode($foot_slot->equipment),
-                    'weapon' => json_encode($foot_slot->weapon)
                 )); 
             }
         }

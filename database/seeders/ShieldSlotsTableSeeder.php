@@ -22,15 +22,10 @@ class ShieldSlotsTableSeeder extends Seeder
                     'item_id' => $shield_slot->id,
                     'name' => $shield_slot->name,
                     'last_updated' => $shield_slot->last_updated,
-                    'equipable' => $shield_slot->equipable,
-                    'equipable_by_player' => $shield_slot->equipable_by_player,
-                    'equipable_weapon' => $shield_slot->equipable_weapon,
-                    'duplicate' => $shield_slot->duplicate,
                     'icon' => $shield_slot->icon,
                     'wiki_name' => $shield_slot->wiki_name,
                     'wiki_url' => $shield_slot->wiki_url,
                     'equipment' => json_encode($shield_slot->equipment),
-                    'weapon' => json_encode($shield_slot->weapon)
                 ));
             }
         }

@@ -15,7 +15,6 @@ class Potion extends Model
         'item_id',
         'name',
         'last_updated',
-        'incomplete',
         'icon',
         'wiki_name',
         'wiki_url',

@@ -18,15 +18,10 @@ class CreateFootSlotsTable extends Migration
             $table->integer('item_id');
             $table->string('name');
             $table->string('last_updated');
-            $table->boolean('equipable');
-            $table->boolean('equipable_by_player');
-            $table->boolean('equipable_weapon');
-            $table->boolean("duplicate");
             $table->text("icon");
             $table->string("wiki_name")->nullable();
             $table->string("wiki_url")->nullable();
             $table->text("equipment")->nullable();
-            $table->text("weapon")->nullable();
         });
     }
 

@@ -22,15 +22,10 @@ class CapeSlotsTableSeeder extends Seeder
                     'item_id' => $cape_slot->id,
                     'name' => $cape_slot->name,
                     'last_updated' => $cape_slot->last_updated,
-                    'equipable' => $cape_slot->equipable,
-                    'equipable_by_player' => $cape_slot->equipable_by_player,
-                    'equipable_weapon' => $cape_slot->equipable_weapon,
-                    'duplicate' => $cape_slot->duplicate,
                     'icon' => $cape_slot->icon,
                     'wiki_name' => $cape_slot->wiki_name,
                     'wiki_url' => $cape_slot->wiki_url,
                     'equipment' => json_encode($cape_slot->equipment),
-                    'weapon' => json_encode($cape_slot->weapon)
                 ));
             }
         }
