@@ -21467,7 +21467,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/combat-calc */ "./resources/js/utils/combat-calc.js");
 /* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interface/elements/InventoryTabs */ "./resources/js/components/interface/elements/InventoryTabs.jsx");
-/* harmony import */ var _interface_menus_Equipment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/Equipment */ "./resources/js/components/interface/menus/Equipment.jsx");
+/* harmony import */ var _interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/equipment/Equipment */ "./resources/js/components/interface/menus/equipment/Equipment.jsx");
 /* harmony import */ var _interface_menus_inventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/inventory */ "./resources/js/components/interface/menus/inventory.jsx");
 /* harmony import */ var _interface_menus_Monsters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/Monsters */ "./resources/js/components/interface/menus/Monsters.jsx");
 /* harmony import */ var _interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interface/menus/Prayers */ "./resources/js/components/interface/menus/Prayers.jsx");
@@ -21526,7 +21526,7 @@ var CombatVisualizer = function CombatVisualizer() {
       children: "combat style"
     }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
       children: "levels"
-    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_Monsters__WEBPACK_IMPORTED_MODULE_5__.default, {}) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_Equipment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_6__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_Monsters__WEBPACK_IMPORTED_MODULE_5__.default, {}) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_Prayers__WEBPACK_IMPORTED_MODULE_6__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
       children: "Run"
     })]
   });
@@ -21632,295 +21632,6 @@ var InventoryTabs = function InventoryTabs(_ref) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InventoryTabs);
-
-/***/ }),
-
-/***/ "./resources/js/components/interface/menus/Equipment.jsx":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/interface/menus/Equipment.jsx ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var Equipment = function Equipment() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      show = _useState2[0],
-      setShow = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState4 = _slicedToArray(_useState3, 2),
-      selectedSlot = _useState4[0],
-      setSelectedSlot = _useState4[1];
-
-  var handleClose = function handleClose() {
-    return setShow(false);
-  };
-
-  var handleShow = function handleShow() {
-    return setShow(true);
-  };
-
-  var toggleModal = function toggleModal(_ref) {
-    var name = _ref.target.name;
-    setSelectedSlot(name);
-    handleShow();
-  };
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    className: "container equipment pt-3",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "row justify-content-md-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "col-md equipment__loadout m-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "row text-center pb-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Head_slot.png",
-              alt: "Head slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "row justify-content-center pb-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Cape_slot.png",
-              alt: "Cape slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Neck_slot.png",
-              alt: "Neck slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Ammo_slot.png",
-              alt: "Ammo slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "row justify-content-center pb-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Weapon_slot.png",
-              alt: "Weapon slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Body_slot.png",
-              alt: "Body slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Shield_slot.png",
-              alt: "Shield slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "row text-center pb-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Legs_slot.png",
-              alt: "Legs slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "row justify-content-center",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Hands_slot.png",
-              alt: "Hands slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Feet_slot.png",
-              alt: "Feet slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-3 p-0 text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/icons/default-equipment-icons/Ring_slot.png",
-              alt: "Ring slot",
-              name: "head",
-              onClick: toggleModal
-            })
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "col-md table equipment__stats m-auto pt-4 table-responsive table-borderless",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-          className: "table table-sm",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                scope: "col",
-                children: "Attack bonuses"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                scope: "col",
-                className: "text-right",
-                children: "Defence bonuses"
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Stab: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Stab: +0"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Slash: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Slash: +0"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Crush: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Crush: +0"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Magic: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Magic: +0"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Range: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Range: +0"
-              })]
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-          className: "table table-sm",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                scope: "col",
-                children: "Other bonuses"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                scope: "col",
-                className: "text-right",
-                children: "Target-specific"
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Melee strength: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Undead: 0%"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Range strength: +0"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "text-right",
-                children: "Slayer: 0%"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Magic damage: +0%"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                children: "Prayer: +0"
-              })
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
-          show: show,
-          onHide: handleClose,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Header, {
-            closeButton: true,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, {
-              children: "Modal heading"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, {
-            children: "Woohoo, you're reading this text in a modal!"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Footer, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
-              variant: "secondary",
-              onClick: handleClose,
-              children: "Close"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
-              variant: "primary",
-              onClick: handleClose,
-              children: "Save Changes"
-            })]
-          })]
-        })]
-      })]
-    })
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Equipment);
 
 /***/ }),
 
@@ -22123,6 +21834,390 @@ var Prayers = function Prayers() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Prayers);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/equipment/Equipment.jsx":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/equipment/Equipment.jsx ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_EquipmentSlots__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/EquipmentSlots */ "./resources/js/components/interface/menus/equipment/components/EquipmentSlots.jsx");
+/* harmony import */ var _components_EquipmentStats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/EquipmentStats */ "./resources/js/components/interface/menus/equipment/components/EquipmentStats.jsx");
+/* harmony import */ var _components_EquipmentSlotModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/EquipmentSlotModal */ "./resources/js/components/interface/menus/equipment/components/EquipmentSlotModal.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var Equipment = function Equipment() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      selectedSlot = _useState2[0],
+      setSelectedSlot = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      showModal = _useState4[0],
+      setShowModal = _useState4[1];
+
+  var handleCloseModal = function handleCloseModal() {
+    return setShowModal(false);
+  };
+
+  var handleShowModal = function handleShowModal() {
+    return setShowModal(true);
+  };
+
+  var selectSlot = function selectSlot(_ref) {
+    var slot = _ref.target.dataset.slot;
+    setSelectedSlot(slot);
+    handleShowModal();
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    className: "container equipment pt-3",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "row justify-content-md-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "col-md equipment__loadout m-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_EquipmentSlots__WEBPACK_IMPORTED_MODULE_1__.default, {
+          selectSlot: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "col-md table equipment__stats m-auto pt-4 table-responsive table-borderless",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_EquipmentStats__WEBPACK_IMPORTED_MODULE_2__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_EquipmentSlotModal__WEBPACK_IMPORTED_MODULE_3__.default, {
+        selectedSlot: selectedSlot,
+        showModal: showModal,
+        handleCloseModal: handleCloseModal
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Equipment);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/equipment/components/EquipmentSlotModal.jsx":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/equipment/components/EquipmentSlotModal.jsx ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
+  var selectedSlot = _ref.selectedSlot,
+      showModal = _ref.showModal,
+      handleCloseModal = _ref.handleCloseModal;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
+    show: showModal,
+    onHide: handleCloseModal,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Header, {
+      closeButton: true,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, {
+        children: selectedSlot
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, {
+      children: "Woohoo, you're reading this text in a modal!"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Footer, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+        variant: "secondary",
+        onClick: handleCloseModal,
+        children: "Close"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+        variant: "primary",
+        onClick: handleCloseModal,
+        children: "Save Changes"
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EquipmentSlotModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/equipment/components/EquipmentSlots.jsx":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/equipment/components/EquipmentSlots.jsx ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var EquipmentSlots = function EquipmentSlots(_ref) {
+  var selectSlot = _ref.selectSlot;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "row text-center pb-1",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Head_slot.png",
+          alt: "Head slot",
+          "data-slot": "head",
+          onClick: selectSlot
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "row justify-content-center pb-1",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Cape_slot.png",
+          alt: "Cape slot",
+          "data-slot": "cape",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Neck_slot.png",
+          alt: "Neck slot",
+          "data-slot": "neck",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Ammo_slot.png",
+          alt: "Ammo slot",
+          "data-slot": "ammo",
+          onClick: selectSlot
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "row justify-content-center pb-1",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Weapon_slot.png",
+          alt: "Weapon slot",
+          "data-slot": "weapon",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Body_slot.png",
+          alt: "Body slot",
+          "data-slot": "body",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Shield_slot.png",
+          alt: "Shield slot",
+          "data-slot": "shield",
+          onClick: selectSlot
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "row text-center pb-1",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Legs_slot.png",
+          alt: "Legs slot",
+          "data-slot": "legs",
+          onClick: selectSlot
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "row justify-content-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Hands_slot.png",
+          alt: "Hands slot",
+          "data-slot": "hands",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Feet_slot.png",
+          alt: "Feet slot",
+          "data-slot": "feet",
+          onClick: selectSlot
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-3 p-0 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/icons/default-equipment-icons/Ring_slot.png",
+          alt: "Ring slot",
+          "data-slot": "ring",
+          onClick: selectSlot
+        })
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EquipmentSlots);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/equipment/components/EquipmentStats.jsx":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/equipment/components/EquipmentStats.jsx ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var EquipmentStats = function EquipmentStats() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+      className: "table table-sm",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            scope: "col",
+            children: "Attack bonuses"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            scope: "col",
+            className: "text-right",
+            children: "Defence bonuses"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Stab: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Stab: +0"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Slash: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Slash: +0"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Crush: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Crush: +0"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Magic: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Magic: +0"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Range: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Range: +0"
+          })]
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+      className: "table table-sm",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            scope: "col",
+            children: "Other bonuses"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            scope: "col",
+            className: "text-right",
+            children: "Target-specific"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Melee strength: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Undead: 0%"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Range strength: +0"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "text-right",
+            children: "Slayer: 0%"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Magic damage: +0%"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Prayer: +0"
+          })
+        })]
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EquipmentStats);
 
 /***/ }),
 

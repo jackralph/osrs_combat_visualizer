@@ -9,7 +9,7 @@ import {
     damagePerSecond
 } from '../utils/combat-calc';
 import InventoryTabs from './interface/elements/InventoryTabs';
-import Equipment from './interface/menus/Equipment';
+import Equipment from './interface/menus/equipment/Equipment';
 import Inventory from './interface/menus/inventory';
 import Monsters from './interface/menus/Monsters';
 import Prayers from './interface/menus/Prayers';
