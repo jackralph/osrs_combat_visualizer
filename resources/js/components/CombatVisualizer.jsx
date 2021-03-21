@@ -16,7 +16,7 @@ import Prayers from './interface/menus/Prayers';
 
 const CombatVisualizer = () => {
 
-    const [currentTab, setCurrentTab] = useState("monsters");
+    const [currentTab, setCurrentTab] = useState("equipment");
 
     const [playerLoadout, setPlayerLoadout] = useState(
         {
