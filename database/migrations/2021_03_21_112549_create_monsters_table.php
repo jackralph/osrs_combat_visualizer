@@ -16,6 +16,7 @@ class CreateMonstersTable extends Migration
         Schema::create('monsters', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('monster_id');
+            $table->string('name');
             $table->integer('combat_level');
             $table->integer('hitpoints')->nullable();
             $table->text('attributes');

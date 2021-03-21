@@ -20,6 +20,7 @@ class MonstersTableSeeder extends Seeder
             if (!$monster->duplicate) {
                 Monster::create(array(
                     'monster_id' => $monster->id,
+                    'name' => $monster->name,
                     'combat_level' => $monster->combat_level,
                     'hitpoints' => $monster->hitpoints,
                     'attributes' => json_encode($monster->attributes),
