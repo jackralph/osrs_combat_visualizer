@@ -17,7 +17,6 @@ class MonstersTableSeeder extends Seeder
         $monsters = json_decode(file_get_contents('database/json/monsters/monsters.json'));
 
         foreach($monsters as $monster) {
-
             if (!$monster->duplicate) {
                 Monster::create(array(
                     'monster_id' => $monster->id,
