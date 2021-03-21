@@ -10,9 +10,9 @@ import {
 } from '../utils/combat-calc';
 import InventoryTabs from './interface/elements/InventoryTabs';
 import Equipment from './interface/menus/equipment/Equipment';
-import Inventory from './interface/menus/inventory';
-import Monsters from './interface/menus/Monsters';
-import Prayers from './interface/menus/Prayers';
+import Inventory from './interface/menus/inventory/Inventory';
+import Monsters from './interface/menus/monsters/Monsters';
+import Prayers from './interface/menus/prayers/Prayers';
 
 const CombatVisualizer = () => {
 
