@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import MonsterSearch from './components/MonsterSearch';
 import MonsterStats from './components/MonsterStats';
+import axios from "axios";
 
 const Monsters = () => {
 
     const [monsterList, setMonsterList] = useState();
 
-    const handleMonsterSearch = () => {
-        console.log("searching");
+    const handleMonsterSearch = ({ target: { value } }) => {
+        axios.get('/monsters', { params: { searchQuery: value }});
     }
 
     return (
