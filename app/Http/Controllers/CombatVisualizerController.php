@@ -13,12 +13,10 @@ class CombatVisualizerController extends Controller
     {
         $potions = Potion::all();
         $prayers = Prayer::all();
-        $monsters = Monster::all();
 
         return view('combat-visualizer', [
             'potions' => $potions,
             'prayers' => $prayers,
-            'monsters' => $monsters
         ]);
     }
 }
