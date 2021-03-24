@@ -4,11 +4,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const MonsterSearch = ({ handleMonsterSearch, monsterList }) => {
 
-    const toggleDropDown = ({ target }) => {
+    const toggleDropDown = () => {
         const monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
         const dropdownVisible = monsterDropdownMenu.classList.contains("dropdown-menu-show");
 
         return dropdownVisible ? monsterDropdownMenu.classList.replace("dropdown-menu-show", "dropdown-menu") : monsterDropdownMenu.classList.replace("dropdown-menu", "dropdown-menu-show");
+    }
+
+    const selectMonster = () => {
+        console.log("selecting");
     }
 
     return (
@@ -24,7 +28,7 @@ const MonsterSearch = ({ handleMonsterSearch, monsterList }) => {
             <div className="monster__dropdown-menu-container">
                 <div id="monster_dropdown-menu" className="monster__dropdown-menu dropdown-menu border">
                     {monsterList.map((monster, i) => {
-                        return <a key={i} className="monster__dropdown-item dropdown-item">{monster.name} - Lvl: {monster.combat_level}</a>
+                        return <a key={i} className="monster__dropdown-item dropdown-item" onClick={selectMonster}>{monster.name}: <img src="/icons/tab-icons/Combat_icon.png" alt="Combat icon"/> {monster.combat_level}</a>
                     })}
                 </div>
             </div>

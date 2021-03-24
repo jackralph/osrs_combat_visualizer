@@ -10049,6 +10049,9 @@ h3 {
   z-index: 1;
   width: 100%;
 }
+.container .monster .monster__dropdown-menu-container .monster__dropdown-item {
+  cursor: pointer;
+}
 .container .monster .monster__stats {
   max-width: 350px;
 }

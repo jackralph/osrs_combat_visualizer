@@ -67,6 +67,10 @@
             z-index: 1;
             width: 100%;
         }
+
+        .monster__dropdown-item {
+            cursor: pointer;
+        }
     }
     .monster__stats {
         max-width: 350px;

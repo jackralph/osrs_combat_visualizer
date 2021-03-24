@@ -12203,14 +12203,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/combat-calc */ "./resources/js/utils/combat-calc.js");
-/* harmony import */ var _utils_combat_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_combat_calc__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interface/elements/InventoryTabs */ "./resources/js/components/interface/elements/InventoryTabs.jsx");
-/* harmony import */ var _interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/equipment/Equipment */ "./resources/js/components/interface/menus/equipment/Equipment.jsx");
-/* harmony import */ var _interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/inventory/Inventory */ "./resources/js/components/interface/menus/inventory/Inventory.jsx");
-/* harmony import */ var _interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/monsters/Monsters */ "./resources/js/components/interface/menus/monsters/Monsters.jsx");
-/* harmony import */ var _interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interface/menus/prayers/Prayers */ "./resources/js/components/interface/menus/prayers/Prayers.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interface/elements/InventoryTabs */ "./resources/js/components/interface/elements/InventoryTabs.jsx");
+/* harmony import */ var _interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interface/menus/equipment/Equipment */ "./resources/js/components/interface/menus/equipment/Equipment.jsx");
+/* harmony import */ var _interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/inventory/Inventory */ "./resources/js/components/interface/menus/inventory/Inventory.jsx");
+/* harmony import */ var _interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/monsters/Monsters */ "./resources/js/components/interface/menus/monsters/Monsters.jsx");
+/* harmony import */ var _interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/prayers/Prayers */ "./resources/js/components/interface/menus/prayers/Prayers.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -12232,7 +12230,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var CombatVisualizer = function CombatVisualizer() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("monsters"),
       _useState2 = _slicedToArray(_useState, 2),
@@ -12240,32 +12237,39 @@ var CombatVisualizer = function CombatVisualizer() {
       setCurrentTab = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    levels: {
-      attack: 1,
-      strength: 1,
-      range: 1,
-      mage: 1
+    combatStats: {
+      combatLevel: 1,
+      attackLevel: 1,
+      strengthLevel: 1,
+      defenceLevel: 1,
+      magicLevel: 1,
+      rangeLevel: 1
     },
-    potions: {},
-    prayers: {},
-    equipment: {},
-    combatStyle: "melee",
-    attackStyle: "accurate"
+    defenceBonuses: {
+      stab: 0,
+      slash: 0,
+      crush: 0,
+      magic: 0,
+      range: 0
+    }
   }),
       _useState4 = _slicedToArray(_useState3, 2),
-      playerLoadout = _useState4[0],
-      setPlayerLoadout = _useState4[1];
+      currentMonsterStats = _useState4[0],
+      setCurrentMonsterStats = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_2__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_1__.default, {
       setCurrentTab: setCurrentTab,
       currentTab: currentTab
-    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_4__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "combat style"
-    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "levels"
-    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_5__.default, {}) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_6__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_4__.default, {
+      currentMonsterStats: currentMonsterStats,
+      setCurrentMonsterStats: setCurrentMonsterStats
+    }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_2__.default, {}) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_5__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       children: "Run"
     })]
   });
@@ -12844,20 +12848,23 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Monsters = function Monsters() {
+var Monsters = function Monsters(_ref) {
+  var currentMonsterStats = _ref.currentMonsterStats,
+      setCurrentMonsterStats = _ref.setCurrentMonsterStats;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(monsters),
       _useState2 = _slicedToArray(_useState, 2),
       monsterList = _useState2[0],
       setMonsterList = _useState2[1];
 
-  var handleMonsterSearch = function handleMonsterSearch(_ref) {
-    var value = _ref.target.value;
+  var handleMonsterSearch = function handleMonsterSearch(_ref2) {
+    var value = _ref2.target.value;
     axios__WEBPACK_IMPORTED_MODULE_3___default().get('/monsters', {
       params: {
         searchQuery: value
       }
-    }).then(function (_ref2) {
-      var data = _ref2.data.data;
+    }).then(function (_ref3) {
+      var data = _ref3.data.data;
       setMonsterList(data);
     });
   };
@@ -12870,11 +12877,14 @@ var Monsters = function Monsters() {
         className: "col-md monster__search mr-auto ml-auto pt-4 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_MonsterSearch__WEBPACK_IMPORTED_MODULE_1__.default, {
           handleMonsterSearch: handleMonsterSearch,
-          monsterList: monsterList
+          monsterList: monsterList,
+          setCurrentMonsterStats: setCurrentMonsterStats
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "col-md table monster__stats m-auto pt-4 table-responsive table-borderless",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_MonsterStats__WEBPACK_IMPORTED_MODULE_2__.default, {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_MonsterStats__WEBPACK_IMPORTED_MODULE_2__.default, {
+          currentMonsterStats: currentMonsterStats
+        })
       })]
     })
   });
@@ -12910,11 +12920,14 @@ var MonsterSearch = function MonsterSearch(_ref) {
   var handleMonsterSearch = _ref.handleMonsterSearch,
       monsterList = _ref.monsterList;
 
-  var toggleDropDown = function toggleDropDown(_ref2) {
-    var target = _ref2.target;
+  var toggleDropDown = function toggleDropDown() {
     var monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
     var dropdownVisible = monsterDropdownMenu.classList.contains("dropdown-menu-show");
     return dropdownVisible ? monsterDropdownMenu.classList.replace("dropdown-menu-show", "dropdown-menu") : monsterDropdownMenu.classList.replace("dropdown-menu", "dropdown-menu-show");
+  };
+
+  var selectMonster = function selectMonster() {
+    console.log("selecting");
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
@@ -12947,7 +12960,11 @@ var MonsterSearch = function MonsterSearch(_ref) {
         children: monsterList.map(function (monster, i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
             className: "monster__dropdown-item dropdown-item",
-            children: [monster.name, " - Lvl: ", monster.combat_level]
+            onClick: selectMonster,
+            children: [monster.name, ": ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+              src: "/icons/tab-icons/Combat_icon.png",
+              alt: "Combat icon"
+            }), " ", monster.combat_level]
           }, i);
         })
       })
@@ -12976,7 +12993,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var MonsterStats = function MonsterStats() {
+var MonsterStats = function MonsterStats(_ref) {
+  var currentMonsterStats = _ref.currentMonsterStats;
+  var _currentMonsterStats$ = currentMonsterStats.combatStats,
+      combatLevel = _currentMonsterStats$.combatLevel,
+      attackLevel = _currentMonsterStats$.attackLevel,
+      strengthLevel = _currentMonsterStats$.strengthLevel,
+      defenceLevel = _currentMonsterStats$.defenceLevel,
+      magicLevel = _currentMonsterStats$.magicLevel,
+      rangeLevel = _currentMonsterStats$.rangeLevel;
+  var _currentMonsterStats$2 = currentMonsterStats.defenceBonuses,
+      stab = _currentMonsterStats$2.stab,
+      slash = _currentMonsterStats$2.slash,
+      crush = _currentMonsterStats$2.crush,
+      magic = _currentMonsterStats$2.magic,
+      range = _currentMonsterStats$2.range;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
     className: "table table-sm",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
@@ -12996,57 +13027,57 @@ var MonsterStats = function MonsterStats() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/tab-icons/Combat_icon.png",
             alt: "Combat icon"
-          }), " 1"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          }), " ", combatLevel]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: "Stab: +0"
+          children: ["Stab: +", stab]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Attack_icon.png",
             alt: "Attack icon"
-          }), " 1"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          }), " ", attackLevel]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: "Slash: +0"
+          children: ["Slash: +", slash]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Strength_icon.png",
             alt: "Strength icon"
-          }), " 1"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          }), " ", strengthLevel]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: "Crush: +0"
+          children: ["Crush: +", crush]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Defence_icon.png",
             alt: "Defence icon"
-          }), " 1"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          }), " ", defenceLevel]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: "Magic: +0"
+          children: ["Magic: +", magic]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Magic_icon.png",
             alt: "Magic icon"
-          }), " 1"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          }), " ", magicLevel]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: "Range: +0"
+          children: ["Range: +", range]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Ranged_icon.png",
             alt: "Ranged icon"
-          }), " 1"]
+          }), " ", rangeLevel]
         })
       })]
     })]
@@ -13104,68 +13135,6 @@ var Prayers = function Prayers() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Prayers);
-
-/***/ }),
-
-/***/ "./resources/js/utils/combat-calc.js":
-/*!*******************************************!*\
-  !*** ./resources/js/utils/combat-calc.js ***!
-  \*******************************************/
-/***/ ((module) => {
-
-var effectiveLevel = function effectiveLevel(skillLevel, potionEffect, prayerEffect, combatStyleEffect) {
-  return Math.floor((skillLevel + potionEffect) * prayerEffect + combatStyleEffect + 8);
-};
-
-var potionBoost = function potionBoost(skillLevel, levelBoostInt, levelBoostPercent) {
-  return Math.floor(levelBoostInt + skillLevel * levelBoostPercent);
-};
-
-var maxHit = function maxHit(effectiveLevel, equipmentBonus, setBonus) {
-  var voidSet = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
-
-  if (voidSet) {
-    return Math.floor((0.5 + effectiveLevel * (equipmentBonus + 64) / 640) * setBonus);
-  } else {
-    return Math.floor(Math.floor(0.5 + effectiveLevel * (equipmentBonus + 64) / 640) * setBonus);
-  }
-};
-
-var maxAttackRoll = function maxAttackRoll(effectiveLevel, equipmentBonus) {
-  var setBonus = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-
-  if (setBonus === 1.1667) {
-    return effectiveLevel * (equipmentBonus + 64) * 7 / 6;
-  } else {
-    return effectiveLevel * (equipmentBonus + 64) * setBonus;
-  }
-};
-
-var maxDefenceRoll = function maxDefenceRoll(effectiveLevel, equipmentBonus) {
-  return effectiveLevel * (equipmentBonus + 64);
-};
-
-var hitChance = function hitChance(maxAttackRoll, maxDefenceRoll) {
-  if (maxAttackRoll > maxDefenceRoll) {
-    return Number((1 - (maxDefenceRoll + 2) / (2 * (maxAttackRoll + 1))).toFixed(11));
-  } else {
-    return Number((maxAttackRoll / (2 * maxDefenceRoll + 1)).toFixed(11));
-  }
-};
-
-var damagePerSecond = function damagePerSecond(hitChance, maxHit, attackInterval) {
-  return Number((hitChance * (maxHit / 2) / attackInterval).toFixed(11));
-};
-
-module.exports = {
-  effectiveLevel: effectiveLevel,
-  potionBoost: potionBoost,
-  maxHit: maxHit,
-  maxAttackRoll: maxAttackRoll,
-  maxDefenceRoll: maxDefenceRoll,
-  hitChance: hitChance,
-  damagePerSecond: damagePerSecond
-};
 
 /***/ }),
 
