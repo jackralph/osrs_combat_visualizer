@@ -58,6 +58,16 @@
     .monster__search {
         max-width: 400px;
     }
+    .monster__dropdown-menu-container {
+        position: relative;
+
+        .monster__dropdown-menu {
+            background: white;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+        }
+    }
     .monster__stats {
         max-width: 350px;
     }

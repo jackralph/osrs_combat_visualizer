@@ -12845,7 +12845,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Monsters = function Monsters() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(monsters),
       _useState2 = _slicedToArray(_useState, 2),
       monsterList = _useState2[0],
       setMonsterList = _useState2[1];
@@ -12856,6 +12856,9 @@ var Monsters = function Monsters() {
       params: {
         searchQuery: value
       }
+    }).then(function (_ref2) {
+      var data = _ref2.data.data;
+      setMonsterList(data);
     });
   };
 
@@ -12866,7 +12869,8 @@ var Monsters = function Monsters() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "col-md monster__search mr-auto ml-auto pt-4 text-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_MonsterSearch__WEBPACK_IMPORTED_MODULE_1__.default, {
-          handleMonsterSearch: handleMonsterSearch
+          handleMonsterSearch: handleMonsterSearch,
+          monsterList: monsterList
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "col-md table monster__stats m-auto pt-4 table-responsive table-borderless",
@@ -12903,10 +12907,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MonsterSearch = function MonsterSearch(_ref) {
-  var handleMonsterSearch = _ref.handleMonsterSearch;
+  var handleMonsterSearch = _ref.handleMonsterSearch,
+      monsterList = _ref.monsterList;
+
+  var toggleDropDown = function toggleDropDown(_ref2) {
+    var target = _ref2.target;
+    var monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
+    var dropdownVisible = monsterDropdownMenu.classList.contains("dropdown-menu-show");
+    return dropdownVisible ? monsterDropdownMenu.classList.replace("dropdown-menu-show", "dropdown-menu") : monsterDropdownMenu.classList.replace("dropdown-menu", "dropdown-menu-show");
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "input-group input-group-lg rounded-top",
+      className: "monster__search-bar input-group input-group-lg rounded-top",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "input-group-prepend",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
@@ -12922,19 +12935,22 @@ var MonsterSearch = function MonsterSearch(_ref) {
         "aria-label": "Large",
         "aria-describedby": "inputGroup-sizing-sm",
         placeholder: "Search for monster",
+        onFocus: toggleDropDown,
+        onBlur: toggleDropDown,
         onChange: handleMonsterSearch
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "dropdown-menu-show border",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-        className: "dropdown-item",
-        href: "#",
-        children: "Action"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-        className: "dropdown-item",
-        href: "#",
-        children: "Another action"
-      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "monster__dropdown-menu-container",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        id: "monster_dropdown-menu",
+        className: "monster__dropdown-menu dropdown-menu border",
+        children: monsterList.map(function (monster, i) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+            className: "monster__dropdown-item dropdown-item",
+            children: [monster.name, " - Lvl: ", monster.combat_level]
+          }, i);
+        })
+      })
     })]
   });
 };

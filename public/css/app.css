@@ -10040,6 +10040,15 @@ h3 {
 .container .monster .monster__search {
   max-width: 400px;
 }
+.container .monster .monster__dropdown-menu-container {
+  position: relative;
+}
+.container .monster .monster__dropdown-menu-container .monster__dropdown-menu {
+  background: white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
 .container .monster .monster__stats {
   max-width: 350px;
 }

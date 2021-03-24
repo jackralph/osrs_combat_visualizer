@@ -2,20 +2,31 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const MonsterSearch = ({ handleMonsterSearch }) => {
+const MonsterSearch = ({ handleMonsterSearch, monsterList }) => {
+
+    const toggleDropDown = ({ target }) => {
+        const monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
+        const dropdownVisible = monsterDropdownMenu.classList.contains("dropdown-menu-show");
+
+        return dropdownVisible ? monsterDropdownMenu.classList.replace("dropdown-menu-show", "dropdown-menu") : monsterDropdownMenu.classList.replace("dropdown-menu", "dropdown-menu-show");
+    }
+
     return (
         <>
-            <div className="input-group input-group-lg rounded-top">
+            <div className="monster__search-bar input-group input-group-lg rounded-top">
                 <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-lg">
                         <FontAwesomeIcon icon={faSearch} />
                     </span>
                 </div>
-                <input type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Search for monster" onChange={handleMonsterSearch} />
+                <input type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Search for monster" onFocus={toggleDropDown} onBlur={toggleDropDown} onChange={handleMonsterSearch} />
             </div>
-            <div className="dropdown-menu-show border">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
+            <div className="monster__dropdown-menu-container">
+                <div id="monster_dropdown-menu" className="monster__dropdown-menu dropdown-menu border">
+                    {monsterList.map((monster, i) => {
+                        return <a key={i} className="monster__dropdown-item dropdown-item">{monster.name} - Lvl: {monster.combat_level}</a>
+                    })}
+                </div>
             </div>
         </>
     );
