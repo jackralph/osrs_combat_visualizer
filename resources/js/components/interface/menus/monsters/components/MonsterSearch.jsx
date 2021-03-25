@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const MonsterSearch = ({ handleMonsterSearch, monsterList }) => {
+const MonsterSearch = ({ handleMonsterSearch, monsterList, setCurrentMonsterStats }) => {
 
     const toggleDropDown = () => {
         const monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
@@ -12,7 +12,23 @@ const MonsterSearch = ({ handleMonsterSearch, monsterList }) => {
     }
     
     const selectMonster = (monster) => {
-        console.log(monster);
+        setCurrentMonsterStats({
+            combatStats: {
+                combatLevel: monster.combat_level,
+                attackLevel: monster.attack_level,
+                strengthLevel: monster.strength_level,
+                defenceLevel: monster.defence_level,
+                magicLevel: monster.magic_level,
+                rangedLevel: monster.ranged_level
+            },
+            defenceBonuses: {
+                stab: monster.defence_stab,
+                slash: monster.defence_slash,
+                crush: monster.defence_crush,
+                magic: monster.defence_magic,
+                ranged: monster.defence_ranged
+            }
+        })
     }
 
     return (

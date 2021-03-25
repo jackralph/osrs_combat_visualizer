@@ -12243,14 +12243,14 @@ var CombatVisualizer = function CombatVisualizer() {
       strengthLevel: 1,
       defenceLevel: 1,
       magicLevel: 1,
-      rangeLevel: 1
+      rangedLevel: 1
     },
     defenceBonuses: {
       stab: 0,
       slash: 0,
       crush: 0,
       magic: 0,
-      range: 0
+      ranged: 0
     }
   }),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -12918,7 +12918,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var MonsterSearch = function MonsterSearch(_ref) {
   var handleMonsterSearch = _ref.handleMonsterSearch,
-      monsterList = _ref.monsterList;
+      monsterList = _ref.monsterList,
+      setCurrentMonsterStats = _ref.setCurrentMonsterStats;
 
   var toggleDropDown = function toggleDropDown() {
     var monsterDropdownMenu = document.getElementById('monster_dropdown-menu');
@@ -12927,7 +12928,23 @@ var MonsterSearch = function MonsterSearch(_ref) {
   };
 
   var selectMonster = function selectMonster(monster) {
-    console.log(monster);
+    setCurrentMonsterStats({
+      combatStats: {
+        combatLevel: monster.combat_level,
+        attackLevel: monster.attack_level,
+        strengthLevel: monster.strength_level,
+        defenceLevel: monster.defence_level,
+        magicLevel: monster.magic_level,
+        rangedLevel: monster.ranged_level
+      },
+      defenceBonuses: {
+        stab: monster.defence_stab,
+        slash: monster.defence_slash,
+        crush: monster.defence_crush,
+        magic: monster.defence_magic,
+        ranged: monster.defence_ranged
+      }
+    });
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
@@ -13003,13 +13020,18 @@ var MonsterStats = function MonsterStats(_ref) {
       strengthLevel = _currentMonsterStats$.strengthLevel,
       defenceLevel = _currentMonsterStats$.defenceLevel,
       magicLevel = _currentMonsterStats$.magicLevel,
-      rangeLevel = _currentMonsterStats$.rangeLevel;
+      rangedLevel = _currentMonsterStats$.rangedLevel;
   var _currentMonsterStats$2 = currentMonsterStats.defenceBonuses,
       stab = _currentMonsterStats$2.stab,
       slash = _currentMonsterStats$2.slash,
       crush = _currentMonsterStats$2.crush,
       magic = _currentMonsterStats$2.magic,
-      range = _currentMonsterStats$2.range;
+      ranged = _currentMonsterStats$2.ranged;
+
+  var statSign = function statSign(stat) {
+    return stat >= 0 && "+";
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
     className: "table table-sm",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
@@ -13032,7 +13054,7 @@ var MonsterStats = function MonsterStats(_ref) {
           }), " ", combatLevel]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: ["Stab: +", stab]
+          children: ["Stab: ", statSign(stab), stab]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
@@ -13042,7 +13064,7 @@ var MonsterStats = function MonsterStats(_ref) {
           }), " ", attackLevel]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: ["Slash: +", slash]
+          children: ["Slash: ", statSign(slash), slash]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
@@ -13052,7 +13074,7 @@ var MonsterStats = function MonsterStats(_ref) {
           }), " ", strengthLevel]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: ["Crush: +", crush]
+          children: ["Crush: ", statSign(crush), crush]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
@@ -13062,7 +13084,7 @@ var MonsterStats = function MonsterStats(_ref) {
           }), " ", defenceLevel]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: ["Magic: +", magic]
+          children: ["Magic: ", statSign(magic), magic]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
@@ -13072,14 +13094,14 @@ var MonsterStats = function MonsterStats(_ref) {
           }), " ", magicLevel]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           className: "text-right",
-          children: ["Range: +", range]
+          children: ["Range: ", statSign(ranged), ranged]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/icons/skill-icons/Ranged_icon.png",
             alt: "Ranged icon"
-          }), " ", rangeLevel]
+          }), " ", rangedLevel]
         })
       })]
     })]

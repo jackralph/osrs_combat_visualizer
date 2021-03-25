@@ -16,14 +16,14 @@ const CombatVisualizer = () => {
             strengthLevel: 1,
             defenceLevel: 1,
             magicLevel: 1,
-            rangeLevel: 1
+            rangedLevel: 1
         },
         defenceBonuses: {
             stab: 0,
             slash: 0,
             crush: 0,
             magic: 0,
-            range: 0
+            ranged: 0
         }
     });
 
