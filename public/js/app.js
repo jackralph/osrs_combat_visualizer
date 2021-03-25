@@ -12926,8 +12926,8 @@ var MonsterSearch = function MonsterSearch(_ref) {
     return dropdownVisible ? monsterDropdownMenu.classList.replace("dropdown-menu-show", "dropdown-menu") : monsterDropdownMenu.classList.replace("dropdown-menu", "dropdown-menu-show");
   };
 
-  var selectMonster = function selectMonster() {
-    console.log("selecting");
+  var selectMonster = function selectMonster(monster) {
+    console.log(monster);
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
@@ -12960,8 +12960,10 @@ var MonsterSearch = function MonsterSearch(_ref) {
         children: monsterList.map(function (monster, i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
             className: "monster__dropdown-item dropdown-item",
-            onClick: selectMonster,
-            children: [monster.name, ": ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            onMouseDown: function onMouseDown() {
+              return selectMonster(monster);
+            },
+            children: [monster.wiki_name, ": ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
               src: "/icons/tab-icons/Combat_icon.png",
               alt: "Combat icon"
             }), " ", monster.combat_level]
