@@ -17,6 +17,8 @@ const Equipment = () => {
         handleShowModal();
     }
 
+    console.log(head_slots);
+
     return (
         <div className="container equipment pt-3">
             <div className="row justify-content-md-center">

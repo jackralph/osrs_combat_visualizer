@@ -12231,7 +12231,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var CombatVisualizer = function CombatVisualizer() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("monsters"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("equipment"),
       _useState2 = _slicedToArray(_useState, 2),
       currentTab = _useState2[0],
       setCurrentTab = _useState2[1];
@@ -12438,6 +12438,7 @@ var Equipment = function Equipment() {
     handleShowModal();
   };
 
+  console.log(head_slots);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "container equipment pt-3",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {

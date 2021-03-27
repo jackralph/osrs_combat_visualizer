@@ -28,6 +28,7 @@
             const potions = {!! json_encode($potions) !!}
             const prayers = {!! json_encode($prayers) !!}
             const monsters = {!! json_encode($monsters) !!}
+            const head_slots = {!! json_encode($head_slots) !!}
         </script>
 
         <div id="content"></div>
