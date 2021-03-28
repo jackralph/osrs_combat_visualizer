@@ -12602,7 +12602,7 @@ var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
         closeButton: true,
         className: "p-0 pb-3 border-bottom-0"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "monster__search-bar input-group input-group-lg rounded-top",
+        className: "equipment__search-bar input-group input-group-lg rounded-top",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "input-group-prepend",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
@@ -12623,14 +12623,17 @@ var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
           }
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "monster__dropdown-menu-container",
+        className: "equipment__dropdown-menu-container",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          id: "monster_dropdown-menu",
-          className: "monster__dropdown-menu dropdown-menu-show border",
+          id: "equipment_dropdown-menu",
+          className: "equipment__dropdown-menu dropdown-menu-show border",
           children: equipment.map(function (item, i) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              className: "monster__dropdown-item dropdown-item",
-              children: item.wiki_name
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+              className: "equipment__dropdown-item dropdown-item",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                src: "data:image/png;base64, ".concat(item.icon),
+                alt: item.name
+              }), item.wiki_name]
             }, i);
           })
         })

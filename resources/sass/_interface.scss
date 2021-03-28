@@ -41,6 +41,20 @@
         height: 70px;
         width: 70px;
     }
+    .equipment__dropdown-menu-container {
+        position: relative;
+
+        .equipment__dropdown-menu {
+            background: white;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .equipment__dropdown-item {
+            cursor: pointer;
+        }
+    }
 }
 
 // Prayer

@@ -10031,6 +10031,18 @@ h3 {
   height: 70px;
   width: 70px;
 }
+.container .equipment .equipment__dropdown-menu-container {
+  position: relative;
+}
+.container .equipment .equipment__dropdown-menu-container .equipment__dropdown-menu {
+  background: white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.container .equipment .equipment__dropdown-menu-container .equipment__dropdown-item {
+  cursor: pointer;
+}
 
 .prayer__icon img {
   padding: 10px;

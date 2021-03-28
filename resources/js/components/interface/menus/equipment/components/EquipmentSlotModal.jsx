@@ -12,7 +12,7 @@ const EquipmentSlotModal = ({selectedSlot, equipment, showModal, handleCloseModa
         <Modal show={showModal} onHide={handleCloseModal} className="pl-0">
             <Modal.Body className="pb-4">
                 <Modal.Header closeButton className="p-0 pb-3 border-bottom-0"/> 
-                <div className="monster__search-bar input-group input-group-lg rounded-top">
+                <div className="equipment__search-bar input-group input-group-lg rounded-top">
                     <div className="input-group-prepend">
                         <span className="input-group-text" id="inputGroup-sizing-lg">
                             <FontAwesomeIcon icon={faSearch} />
@@ -20,10 +20,10 @@ const EquipmentSlotModal = ({selectedSlot, equipment, showModal, handleCloseModa
                     </div>
                     <input type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder={`Search ${selectedSlot} slots`} onChange = {e => handleEquipmentSearch(e, selectedSlot)} />
                 </div>
-                <div className="monster__dropdown-menu-container">
-                    <div id="monster_dropdown-menu" className="monster__dropdown-menu dropdown-menu-show border">
+                <div className="equipment__dropdown-menu-container">
+                    <div id="equipment_dropdown-menu" className="equipment__dropdown-menu dropdown-menu-show border">
                         {equipment.map((item, i) => {
-                            return <a key={i} className="monster__dropdown-item dropdown-item">{item.wiki_name}</a>
+                            return <a key={i} className="equipment__dropdown-item dropdown-item"><img src={`data:image/png;base64, ${item.icon}`} alt={item.name}/>{item.wiki_name}</a>
                         })}
                     </div>
                 </div>    
