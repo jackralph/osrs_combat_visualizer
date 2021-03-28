@@ -23,67 +23,67 @@ class EquipmentController extends Controller
 
         if ($slot === 'ammo') {
 
-            $ammo_slots = AmmoSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $ammo_slots = AmmoSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $ammo_slots;
 
         } else if ($slot === 'body') {
             
-            $body_slots = BodySlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $body_slots = BodySlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $body_slots;
 
         } else if ($slot === 'cape') {
 
-            $cape_slots = CapeSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $cape_slots = CapeSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $cape_slots;
 
         } else if ($slot === 'foot') {
 
-            $foot_slots = FootSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $foot_slots = FootSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $foot_slots;
 
         } else if ($slot === 'hand') {
 
-            $hand_slots = HandSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $hand_slots = HandSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $hand_slots;
 
         } else if ($slot === 'head') {
 
-            $head_slots = HeadSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $head_slots = HeadSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $head_slots;
 
         } else if ($slot === 'leg') {
 
-            $leg_slots = LegSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $leg_slots = LegSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $leg_slots;
 
         } else if ($slot === 'neck') {
 
-            $neck_slots = NeckSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $neck_slots = NeckSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $neck_slots;
 
         } else if ($slot === 'ring') {
 
-            $ring_slots = RingSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $ring_slots = RingSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $ring_slots;
 
         } else if ($slot === 'shield') {
 
-            $shield_slots = ShieldSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $shield_slots = ShieldSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $shield_slots;
 
         } else {
 
-            $weapon_slots = WeaponSlot::where('name', 'like', $search_query . '%')->paginate(15);
+            $weapon_slots = WeaponSlot::where('name', 'like', "%{$search_query}%")->paginate(15);
 
             return $weapon_slots;
 
