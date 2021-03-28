@@ -42,11 +42,11 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
                 return body_slots;
             case "shield":
                 return shield_slots;
-            case "legs":
+            case "leg":
                 return leg_slots;
-            case "hands":
+            case "hand":
                 return hand_slots;
-            case "feet":
+            case "foot":
                 return foot_slots;
             case "ring":
                 return ring_slots;

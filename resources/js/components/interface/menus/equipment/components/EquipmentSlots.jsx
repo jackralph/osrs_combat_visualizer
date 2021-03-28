@@ -32,15 +32,15 @@ const EquipmentSlots = ({ selectSlot }) => {
             </div>
             <div className="row text-center pb-1">
                 <div className="col">
-                    <img src="/icons/default-equipment-icons/Legs_slot.png" alt="Legs slot" data-slot="legs" onClick={selectSlot} />
+                    <img src="/icons/default-equipment-icons/Legs_slot.png" alt="Legs slot" data-slot="leg" onClick={selectSlot} />
                 </div>
             </div>
             <div className="row justify-content-center">
                 <div className="col-3 p-0 text-center">
-                    <img src="/icons/default-equipment-icons/Hands_slot.png" alt="Hands slot" data-slot="hands" onClick={selectSlot} />
+                    <img src="/icons/default-equipment-icons/Hands_slot.png" alt="Hands slot" data-slot="hand" onClick={selectSlot} />
                 </div>
                 <div className="col-3 p-0 text-center">
-                    <img src="/icons/default-equipment-icons/Feet_slot.png" alt="Feet slot" data-slot="feet" onClick={selectSlot} />
+                    <img src="/icons/default-equipment-icons/Feet_slot.png" alt="Feet slot" data-slot="foot" onClick={selectSlot} />
                 </div>
                 <div className="col-3 p-0 text-center">
                     <img src="/icons/default-equipment-icons/Ring_slot.png" alt="Ring slot" data-slot="ring" onClick={selectSlot} />

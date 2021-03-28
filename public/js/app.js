@@ -12517,13 +12517,13 @@ var Equipment = function Equipment(_ref) {
       case "shield":
         return shield_slots;
 
-      case "legs":
+      case "leg":
         return leg_slots;
 
-      case "hands":
+      case "hand":
         return hand_slots;
 
-      case "feet":
+      case "foot":
         return foot_slots;
 
       case "ring":
@@ -12735,7 +12735,7 @@ var EquipmentSlots = function EquipmentSlots(_ref) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Legs_slot.png",
           alt: "Legs slot",
-          "data-slot": "legs",
+          "data-slot": "leg",
           onClick: selectSlot
         })
       })
@@ -12746,7 +12746,7 @@ var EquipmentSlots = function EquipmentSlots(_ref) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Hands_slot.png",
           alt: "Hands slot",
-          "data-slot": "hands",
+          "data-slot": "hand",
           onClick: selectSlot
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -12754,7 +12754,7 @@ var EquipmentSlots = function EquipmentSlots(_ref) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
           src: "/icons/default-equipment-icons/Feet_slot.png",
           alt: "Feet slot",
-          "data-slot": "feet",
+          "data-slot": "foot",
           onClick: selectSlot
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
