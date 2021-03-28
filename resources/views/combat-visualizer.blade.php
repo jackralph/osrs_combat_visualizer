@@ -28,7 +28,17 @@
             const potions = {!! json_encode($potions) !!}
             const prayers = {!! json_encode($prayers) !!}
             const monsters = {!! json_encode($monsters) !!}
+            const ammo_slots = {!! json_encode($ammo_slots) !!}
+            const body_slots = {!! json_encode($body_slots) !!}
+            const cape_slots = {!! json_encode($cape_slots) !!}
+            const foot_slots = {!! json_encode($foot_slots) !!}
+            const hand_slots = {!! json_encode($hand_slots) !!}
             const head_slots = {!! json_encode($head_slots) !!}
+            const leg_slots = {!! json_encode($leg_slots) !!}
+            const neck_slots = {!! json_encode($neck_slots) !!}
+            const ring_slots = {!! json_encode($ring_slots) !!}
+            const shield_slots = {!! json_encode($shield_slots) !!}
+            const weapon_slots = {!! json_encode($weapon_slots) !!}
         </script>
 
         <div id="content"></div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CombatVisualizerController;
 use App\Http\Controllers\MonsterController;
+use App\Http\Controllers\EquipmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,4 @@ use App\Http\Controllers\MonsterController;
 
 Route::get('/', [CombatVisualizerController::class, 'index']);
 Route::get('/monsters', [MonsterController::class, 'index']);
+Route::get('/equipment/{slot}', [EquipmentController::class, 'index']);

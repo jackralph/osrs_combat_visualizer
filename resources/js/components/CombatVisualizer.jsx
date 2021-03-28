@@ -27,6 +27,33 @@ const CombatVisualizer = () => {
         }
     });
 
+    const [currentEquipmentStats, setCurrentEquipmentStats] = useState({
+        attackBonuses: {
+            stab: 0,
+            slash: 0,
+            crush: 0,
+            magic: 0,
+            ranged: 0
+        },
+        defenceBonuses: {
+            stab: 0,
+            slash: 0,
+            crush: 0,
+            magic: 0,
+            ranged: 0
+        },
+        otherBonuses: {
+            melee_strength: 0,
+            ranged_strength: 0,
+            magic_damage: 0,
+            prayer: 0
+        },
+        targetSpecific: {
+            undead: 0,
+            slayer: 0
+        }
+    })
+
     return (
         <div className="container">
             <InventoryTabs setCurrentTab={setCurrentTab} currentTab={currentTab}/>
@@ -35,7 +62,7 @@ const CombatVisualizer = () => {
                 currentTab === "combat_styles" ? <p>combat style</p> :
                 currentTab === "levels" ? <p>levels</p> :
                 currentTab === "monsters" ? <Monsters currentMonsterStats={currentMonsterStats} setCurrentMonsterStats={setCurrentMonsterStats} /> :
-                currentTab === "equipment" ? <Equipment /> :
+                currentTab === "equipment" ? <Equipment currentEquipmentStats={currentEquipmentStats} setCurrentEquipmentStats={setCurrentEquipmentStats} /> :
                 currentTab === "prayers" ? <Prayers /> :
                 <p>Run</p>
             }
