@@ -6,7 +6,19 @@ import {
     Modal
 } from 'react-bootstrap';
 
-const EquipmentSlotModal = ({selectedSlot, modalEquipment, showModal, handleCloseModal, handleEquipmentSearch}) => {
+const EquipmentSlotModal = ({selectedSlot, modalEquipment, showModal, handleCloseModal, handleEquipmentSearch, setGearSetup}) => {
+
+    const handleGearChange = (item) => {
+
+        const equipmentBonuses = JSON.parse(item.equipment);
+
+        setGearSetup(prevState => {
+            return {...prevState, [selectedSlot]: { equipmentBonuses }}
+        });
+
+        handleCloseModal();
+        
+    }
 
     return (
         <Modal show={showModal} onHide={handleCloseModal} className="pl-0">
@@ -23,7 +35,7 @@ const EquipmentSlotModal = ({selectedSlot, modalEquipment, showModal, handleClos
                 <div className="equipment__dropdown-menu-container">
                     <div id="equipment_dropdown-menu" className="equipment__dropdown-menu dropdown-menu-show border">
                         {modalEquipment.map((item, i) => {
-                            return <a key={i} onClick={() => console.log(JSON.parse(item.equipment))} className="equipment__dropdown-item dropdown-item"><img src={`data:image/png;base64, ${item.icon}`} alt={item.name}/>{item.wiki_name}</a>
+                            return <a key={i} onClick={() => handleGearChange(item)} className="equipment__dropdown-item dropdown-item"><img src={`data:image/png;base64, ${item.icon}`} alt={item.name}/>{item.wiki_name}</a>
                         })}
                     </div>
                 </div>    

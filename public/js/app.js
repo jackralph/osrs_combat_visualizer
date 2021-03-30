@@ -12258,30 +12258,20 @@ var CombatVisualizer = function CombatVisualizer() {
       setCurrentMonsterStats = _useState4[1];
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    attackBonuses: {
-      attack_stab: 0,
-      attack_slash: 0,
-      attack_crush: 0,
-      attack_magic: 0,
-      attack_ranged: 0
-    },
-    defenceBonuses: {
-      defence_stab: 0,
-      defence_slash: 0,
-      defence_crush: 0,
-      defence_magic: 0,
-      defence_ranged: 0
-    },
-    otherBonuses: {
-      melee_strength: 0,
-      ranged_strength: 0,
-      magic_damage: 0,
-      prayer: 0
-    },
-    targetSpecific: {
-      undead: 0,
-      slayer: 0
-    }
+    attack_crush: 0,
+    attack_magic: 0,
+    attack_ranged: 0,
+    attack_slash: 0,
+    attack_stab: 0,
+    defence_crush: 0,
+    defence_magic: 0,
+    defence_ranged: 0,
+    defence_slash: 0,
+    defence_stab: 0,
+    magic_damage: 0,
+    melee_strength: 0,
+    prayer: 0,
+    ranged_strength: 0
   }),
       _useState6 = _slicedToArray(_useState5, 2),
       currentEquipmentStats = _useState6[0],
@@ -12537,289 +12527,223 @@ var Equipment = function Equipment(_ref) {
 
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     head: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     cape: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     neck: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     ammo: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     weapon: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     body: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     shield: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     leg: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     hand: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     foot: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     },
     ring: {
-      attackBonuses: {
-        attack_stab: 0,
-        attack_slash: 0,
+      equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
-        attack_ranged: 0
-      },
-      defenceBonuses: {
-        defence_stab: 0,
-        defence_slash: 0,
+        attack_ranged: 0,
+        attack_slash: 0,
+        attack_stab: 0,
         defence_crush: 0,
         defence_magic: 0,
-        defence_ranged: 0
-      },
-      otherBonuses: {
-        melee_strength: 0,
-        ranged_strength: 0,
+        defence_ranged: 0,
+        defence_slash: 0,
+        defence_stab: 0,
         magic_damage: 0,
-        prayer: 0
-      },
-      targetSpecific: {
-        undead: 0,
-        slayer: 0
+        melee_strength: 0,
+        prayer: 0,
+        ranged_strength: 0,
+        requirements: null,
+        slot: ""
       }
     }
   }),
@@ -12827,6 +12751,32 @@ var Equipment = function Equipment(_ref) {
       gearSetup = _useState8[0],
       setGearSetup = _useState8[1];
 
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var equipmentKeys = Object.keys(gearSetup);
+    var equipmentBonusesKeys = Object.keys(gearSetup[equipmentKeys[0]].equipmentBonuses).slice(0, 14);
+    var totalBonuses = {
+      attack_crush: 0,
+      attack_magic: 0,
+      attack_ranged: 0,
+      attack_slash: 0,
+      attack_stab: 0,
+      defence_crush: 0,
+      defence_magic: 0,
+      defence_ranged: 0,
+      defence_slash: 0,
+      defence_stab: 0,
+      magic_damage: 0,
+      melee_strength: 0,
+      prayer: 0,
+      ranged_strength: 0
+    };
+    equipmentKeys.map(function (equipmentKey) {
+      equipmentBonusesKeys.map(function (equipmentBonusKey) {
+        totalBonuses[equipmentBonusKey] += gearSetup[equipmentKey].equipmentBonuses[equipmentBonusKey];
+      });
+    });
+    setCurrentEquipmentStats(totalBonuses);
+  }, [gearSetup]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
     className: "container equipment pt-3",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -12846,7 +12796,8 @@ var Equipment = function Equipment(_ref) {
         modalEquipment: modalEquipment,
         showModal: showModal,
         handleCloseModal: handleCloseModal,
-        handleEquipmentSearch: handleEquipmentSearch
+        handleEquipmentSearch: handleEquipmentSearch,
+        setGearSetup: setGearSetup
       })]
     })
   });
@@ -12872,6 +12823,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -12884,7 +12841,19 @@ var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
       modalEquipment = _ref.modalEquipment,
       showModal = _ref.showModal,
       handleCloseModal = _ref.handleCloseModal,
-      handleEquipmentSearch = _ref.handleEquipmentSearch;
+      handleEquipmentSearch = _ref.handleEquipmentSearch,
+      setGearSetup = _ref.setGearSetup;
+
+  var handleGearChange = function handleGearChange(item) {
+    var equipmentBonuses = JSON.parse(item.equipment);
+    setGearSetup(function (prevState) {
+      return _objectSpread(_objectSpread({}, prevState), {}, _defineProperty({}, selectedSlot, {
+        equipmentBonuses: equipmentBonuses
+      }));
+    });
+    handleCloseModal();
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     show: showModal,
     onHide: handleCloseModal,
@@ -12923,7 +12892,7 @@ var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
           children: modalEquipment.map(function (item, i) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
               onClick: function onClick() {
-                return console.log(JSON.parse(item.equipment));
+                return handleGearChange(item);
               },
               className: "equipment__dropdown-item dropdown-item",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
@@ -13092,10 +13061,21 @@ __webpack_require__.r(__webpack_exports__);
 
 var EquipmentStats = function EquipmentStats(_ref) {
   var currentEquipmentStats = _ref.currentEquipmentStats;
-  var attackBonuses = currentEquipmentStats.attackBonuses,
-      defenceBonuses = currentEquipmentStats.defenceBonuses,
-      otherBonuses = currentEquipmentStats.otherBonuses,
-      targetSpecific = currentEquipmentStats.targetSpecific;
+  // console.log(currentEquipmentStats);
+  var attack_crush = currentEquipmentStats.attack_crush,
+      attack_magic = currentEquipmentStats.attack_magic,
+      attack_ranged = currentEquipmentStats.attack_ranged,
+      attack_slash = currentEquipmentStats.attack_slash,
+      attack_stab = currentEquipmentStats.attack_stab,
+      defence_crush = currentEquipmentStats.defence_crush,
+      defence_magic = currentEquipmentStats.defence_magic,
+      defence_ranged = currentEquipmentStats.defence_ranged,
+      defence_slash = currentEquipmentStats.defence_slash,
+      defence_stab = currentEquipmentStats.defence_stab,
+      magic_damage = currentEquipmentStats.magic_damage,
+      melee_strength = currentEquipmentStats.melee_strength,
+      prayer = currentEquipmentStats.prayer,
+      ranged_strength = currentEquipmentStats.ranged_strength;
 
   var statSign = function statSign(stat) {
     return stat >= 0 && "+";
@@ -13118,38 +13098,38 @@ var EquipmentStats = function EquipmentStats(_ref) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Stab: ", statSign(attackBonuses.attack_stab), attackBonuses.attack_stab]
+            children: ["Stab: ", statSign(attack_stab), attack_stab]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Stab: ", statSign(defenceBonuses.defence_stab), defenceBonuses.defence_stab]
+            children: ["Stab: ", statSign(defence_stab), defence_stab]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Slash: ", statSign(attackBonuses.attack_slash), attackBonuses.attack_slash]
+            children: ["Slash: ", statSign(attack_slash), attack_slash]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Slash: ", statSign(defenceBonuses.defence_slash), defenceBonuses.defence_slash]
+            children: ["Slash: ", statSign(defence_slash), defence_slash]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Crush: ", statSign(attackBonuses.attack_crush), attackBonuses.attack_crush]
+            children: ["Crush: ", statSign(attack_crush), attack_crush]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Crush: ", statSign(defenceBonuses.defence_crush), defenceBonuses.defence_crush]
+            children: ["Crush: ", statSign(defence_crush), defence_crush]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Magic: ", statSign(attackBonuses.attack_magic), attackBonuses.attack_magic]
+            children: ["Magic: ", statSign(attack_magic), attack_magic]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Magic: ", statSign(defenceBonuses.defence_magic), defenceBonuses.defence_magic]
+            children: ["Magic: ", statSign(defence_magic), defence_magic]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Ranged: ", statSign(attackBonuses.attack_ranged), attackBonuses.attack_ranged]
+            children: ["Ranged: ", statSign(attack_ranged), attack_ranged]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Ranged: ", statSign(defenceBonuses.defence_ranged), defenceBonuses.defence_ranged]
+            children: ["Ranged: ", statSign(defence_ranged), defence_ranged]
           })]
         })]
       })]
@@ -13169,25 +13149,25 @@ var EquipmentStats = function EquipmentStats(_ref) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Melee strength: ", statSign(otherBonuses.melee_strength), otherBonuses.melee_strength]
+            children: ["Melee strength: ", statSign(melee_strength), melee_strength]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Undead: ", statSign(targetSpecific.undead), targetSpecific.undead]
+            children: ["Undead: ", statSign(0), 0]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Ranged strength: ", statSign(otherBonuses.ranged_strength), otherBonuses.ranged_strength]
+            children: ["Ranged strength: ", statSign(ranged_strength), ranged_strength]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
             className: "text-right",
-            children: ["Slayer: ", statSign(targetSpecific.slayer), targetSpecific.slayer]
+            children: ["Slayer: ", statSign(0), 0]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Magic damage: ", statSign(otherBonuses.magic_damage), otherBonuses.magic_damage, "%"]
+            children: ["Magic damage: ", statSign(magic_damage), magic_damage, "%"]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
-            children: ["Prayer: ", statSign(otherBonuses.prayer), otherBonuses.prayer]
+            children: ["Prayer: ", statSign(prayer), prayer]
           })
         })]
       })]

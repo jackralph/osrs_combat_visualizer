@@ -59,292 +59,258 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
 
     const [gearSetup, setGearSetup] = useState({
         head: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         cape: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         neck: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         ammo: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         weapon: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         body: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         shield: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         leg: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         hand: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         foot: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         },
         ring: {
-            attackBonuses: {
-                attack_stab: 0,
-                attack_slash: 0,
+            equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
-                attack_ranged: 0
-            },
-            defenceBonuses: {
-                defence_stab: 0,
-                defence_slash: 0,
+                attack_ranged: 0,
+                attack_slash: 0,
+                attack_stab: 0,
                 defence_crush: 0,
                 defence_magic: 0,
-                defence_ranged: 0
-            },
-            otherBonuses: {
-                melee_strength: 0,
-                ranged_strength: 0,
+                defence_ranged: 0,
+                defence_slash: 0,
+                defence_stab: 0,
                 magic_damage: 0,
-                prayer: 0
-            },
-            targetSpecific: {
-                undead: 0,
-                slayer: 0
+                melee_strength: 0,
+                prayer: 0,
+                ranged_strength: 0,
+                requirements: null,
+                slot: ""
             }
         }
     });
+
+    useEffect(() => {
+        const equipmentKeys = (Object.keys(gearSetup));
+
+        const equipmentBonusesKeys = (Object.keys(gearSetup[equipmentKeys[0]].equipmentBonuses)).slice(0, 14);
+
+        const totalBonuses = {
+            attack_crush: 0,
+            attack_magic: 0,
+            attack_ranged: 0,
+            attack_slash: 0,
+            attack_stab: 0,
+            defence_crush: 0,
+            defence_magic: 0,
+            defence_ranged: 0,
+            defence_slash: 0,
+            defence_stab: 0,
+            magic_damage: 0,
+            melee_strength: 0,
+            prayer: 0,
+            ranged_strength: 0
+        }
+
+        equipmentKeys.map((equipmentKey) => {
+            equipmentBonusesKeys.map((equipmentBonusKey) => {
+                totalBonuses[equipmentBonusKey] += gearSetup[equipmentKey].equipmentBonuses[equipmentBonusKey]; 
+            });
+        });
+
+        setCurrentEquipmentStats(totalBonuses);
+
+    }, [gearSetup]);
 
     return (
         <div className="container equipment pt-3">
@@ -355,7 +321,14 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
                 <div className="col-md table equipment__stats m-auto pt-4 table-responsive table-borderless">
                     <EquipmentStats currentEquipmentStats={currentEquipmentStats}/>
                 </div>
-                <EquipmentSlotModal selectedSlot={selectedSlot} modalEquipment={modalEquipment} showModal={showModal} handleCloseModal={handleCloseModal} handleEquipmentSearch={handleEquipmentSearch}/>
+                <EquipmentSlotModal 
+                selectedSlot={selectedSlot} 
+                modalEquipment={modalEquipment} 
+                showModal={showModal} 
+                handleCloseModal={handleCloseModal} 
+                handleEquipmentSearch={handleEquipmentSearch}
+                setGearSetup={setGearSetup}
+                />
             </div>
         </div>
     );
