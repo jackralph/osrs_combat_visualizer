@@ -19,28 +19,28 @@ const CombatVisualizer = () => {
             rangedLevel: 1
         },
         defenceBonuses: {
-            stab: 0,
-            slash: 0,
-            crush: 0,
-            magic: 0,
-            ranged: 0
+            defence_stab: 0,
+            defence_slash: 0,
+            defence_crush: 0,
+            defence_magic: 0,
+            defence_ranged: 0
         }
     });
 
     const [currentEquipmentStats, setCurrentEquipmentStats] = useState({
         attackBonuses: {
-            stab: 0,
-            slash: 0,
-            crush: 0,
-            magic: 0,
-            ranged: 0
+            attack_stab: 0,
+            attack_slash: 0,
+            attack_crush: 0,
+            attack_magic: 0,
+            attack_ranged: 0
         },
         defenceBonuses: {
-            stab: 0,
-            slash: 0,
-            crush: 0,
-            magic: 0,
-            ranged: 0
+            defence_stab: 0,
+            defence_slash: 0,
+            defence_crush: 0,
+            defence_magic: 0,
+            defence_ranged: 0
         },
         otherBonuses: {
             melee_strength: 0,

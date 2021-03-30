@@ -22,11 +22,11 @@ const MonsterSearch = ({ handleMonsterSearch, monsterList, setCurrentMonsterStat
                 rangedLevel: monster.ranged_level
             },
             defenceBonuses: {
-                stab: monster.defence_stab,
-                slash: monster.defence_slash,
-                crush: monster.defence_crush,
-                magic: monster.defence_magic,
-                ranged: monster.defence_ranged
+                defence_stab: monster.defence_stab,
+                defence_slash: monster.defence_slash,
+                defence_crush: monster.defence_crush,
+                defence_magic: monster.defence_magic,
+                defence_ranged: monster.defence_ranged
             }
         })
     }

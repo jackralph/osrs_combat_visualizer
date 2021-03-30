@@ -18,24 +18,24 @@ const EquipmentStats = ({ currentEquipmentStats }) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Stab: {statSign(attackBonuses.stab)}{attackBonuses.stab}</td>
-                        <td className="text-right">Stab: {statSign(defenceBonuses.stab)}{defenceBonuses.stab}</td>
+                        <td>Stab: {statSign(attackBonuses.attack_stab)}{attackBonuses.attack_stab}</td>
+                        <td className="text-right">Stab: {statSign(defenceBonuses.defence_stab)}{defenceBonuses.defence_stab}</td>
                     </tr>
                     <tr>
-                        <td>Slash: {statSign(attackBonuses.slash)}{attackBonuses.slash}</td>
-                        <td className="text-right">Slash: {statSign(defenceBonuses.slash)}{defenceBonuses.slash}</td>
+                        <td>Slash: {statSign(attackBonuses.attack_slash)}{attackBonuses.attack_slash}</td>
+                        <td className="text-right">Slash: {statSign(defenceBonuses.defence_slash)}{defenceBonuses.defence_slash}</td>
                     </tr>
                     <tr>
-                        <td>Crush: {statSign(attackBonuses.crush)}{attackBonuses.crush}</td>
-                        <td className="text-right">Crush: {statSign(defenceBonuses.crush)}{defenceBonuses.crush}</td>
+                        <td>Crush: {statSign(attackBonuses.attack_crush)}{attackBonuses.attack_crush}</td>
+                        <td className="text-right">Crush: {statSign(defenceBonuses.defence_crush)}{defenceBonuses.defence_crush}</td>
                     </tr>
                     <tr>
-                        <td>Magic: {statSign(attackBonuses.magic)}{attackBonuses.magic}</td>
-                        <td className="text-right">Magic: {statSign(defenceBonuses.magic)}{defenceBonuses.magic}</td>
+                        <td>Magic: {statSign(attackBonuses.attack_magic)}{attackBonuses.attack_magic}</td>
+                        <td className="text-right">Magic: {statSign(defenceBonuses.defence_magic)}{defenceBonuses.defence_magic}</td>
                     </tr>
                     <tr>
-                        <td>Ranged: {statSign(attackBonuses.ranged)}{attackBonuses.ranged}</td>
-                        <td className="text-right">Range: {statSign(defenceBonuses.ranged)}{defenceBonuses.ranged}</td>
+                        <td>Ranged: {statSign(attackBonuses.attack_ranged)}{attackBonuses.attack_ranged}</td>
+                        <td className="text-right">Ranged: {statSign(defenceBonuses.defence_ranged)}{defenceBonuses.defence_ranged}</td>
                     </tr>
                 </tbody>
             </table>
@@ -52,7 +52,7 @@ const EquipmentStats = ({ currentEquipmentStats }) => {
                         <td className="text-right">Undead: {statSign(targetSpecific.undead)}{targetSpecific.undead}</td>
                     </tr>
                     <tr>
-                        <td>Range strength: {statSign(otherBonuses.ranged_strength)}{otherBonuses.ranged_strength}</td>
+                        <td>Ranged strength: {statSign(otherBonuses.ranged_strength)}{otherBonuses.ranged_strength}</td>
                         <td className="text-right">Slayer: {statSign(targetSpecific.slayer)}{targetSpecific.slayer}</td>
                     </tr>
                     <tr>

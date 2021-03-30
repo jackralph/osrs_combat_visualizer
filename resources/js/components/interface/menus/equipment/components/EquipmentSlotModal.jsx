@@ -6,7 +6,7 @@ import {
     Modal
 } from 'react-bootstrap';
 
-const EquipmentSlotModal = ({selectedSlot, equipment, showModal, handleCloseModal, handleEquipmentSearch}) => {
+const EquipmentSlotModal = ({selectedSlot, modalEquipment, showModal, handleCloseModal, handleEquipmentSearch}) => {
 
     return (
         <Modal show={showModal} onHide={handleCloseModal} className="pl-0">
@@ -22,8 +22,8 @@ const EquipmentSlotModal = ({selectedSlot, equipment, showModal, handleCloseModa
                 </div>
                 <div className="equipment__dropdown-menu-container">
                     <div id="equipment_dropdown-menu" className="equipment__dropdown-menu dropdown-menu-show border">
-                        {equipment.map((item, i) => {
-                            return <a key={i} className="equipment__dropdown-item dropdown-item"><img src={`data:image/png;base64, ${item.icon}`} alt={item.name}/>{item.wiki_name}</a>
+                        {modalEquipment.map((item, i) => {
+                            return <a key={i} onClick={() => console.log(JSON.parse(item.equipment))} className="equipment__dropdown-item dropdown-item"><img src={`data:image/png;base64, ${item.icon}`} alt={item.name}/>{item.wiki_name}</a>
                         })}
                     </div>
                 </div>    
