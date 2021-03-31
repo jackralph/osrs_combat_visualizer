@@ -12,8 +12,10 @@ const EquipmentSlotModal = ({selectedSlot, modalEquipment, showModal, handleClos
 
         const equipmentBonuses = JSON.parse(item.equipment);
 
+        const equipmentIcon = item.icon;
+
         setGearSetup(prevState => {
-            return {...prevState, [selectedSlot]: { equipmentBonuses }}
+            return {...prevState, [selectedSlot]: { icon: equipmentIcon, equipmentBonuses }}
         });
 
         handleCloseModal();

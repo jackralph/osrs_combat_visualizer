@@ -55,6 +55,15 @@
             cursor: pointer;
         }
     }
+
+    .equipment__slot-container {
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        background-image: url("/icons/default-equipment-icons/Empty_slot.png");
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+    }
 }
 
 // Prayer

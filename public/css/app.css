@@ -10043,6 +10043,14 @@ h3 {
 .container .equipment .equipment__dropdown-menu-container .equipment__dropdown-item {
   cursor: pointer;
 }
+.container .equipment .equipment__slot-container {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background-image: url("/icons/default-equipment-icons/Empty_slot.png");
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+}
 
 .prayer__icon img {
   padding: 10px;

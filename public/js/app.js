@@ -12527,6 +12527,7 @@ var Equipment = function Equipment(_ref) {
 
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     head: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12547,6 +12548,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     cape: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12567,6 +12569,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     neck: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12587,6 +12590,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     ammo: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12607,6 +12611,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     weapon: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12627,6 +12632,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     body: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12647,6 +12653,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     shield: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12667,6 +12674,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     leg: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12687,6 +12695,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     hand: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12707,6 +12716,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     foot: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12727,6 +12737,7 @@ var Equipment = function Equipment(_ref) {
       }
     },
     ring: {
+      icon: null,
       equipmentBonuses: {
         attack_crush: 0,
         attack_magic: 0,
@@ -12784,7 +12795,8 @@ var Equipment = function Equipment(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "col-md equipment__loadout m-auto",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_EquipmentSlots__WEBPACK_IMPORTED_MODULE_1__.default, {
-          selectSlot: selectSlot
+          selectSlot: selectSlot,
+          gearSetup: gearSetup
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "col-md table equipment__stats m-auto pt-4 table-responsive table-borderless",
@@ -12846,8 +12858,10 @@ var EquipmentSlotModal = function EquipmentSlotModal(_ref) {
 
   var handleGearChange = function handleGearChange(item) {
     var equipmentBonuses = JSON.parse(item.equipment);
+    var equipmentIcon = item.icon;
     setGearSetup(function (prevState) {
       return _objectSpread(_objectSpread({}, prevState), {}, _defineProperty({}, selectedSlot, {
+        icon: equipmentIcon,
         equipmentBonuses: equipmentBonuses
       }));
     });
@@ -12929,109 +12943,153 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var EquipmentSlots = function EquipmentSlots(_ref) {
-  var selectSlot = _ref.selectSlot;
+  var selectSlot = _ref.selectSlot,
+      gearSetup = _ref.gearSetup;
+  var head = gearSetup.head,
+      cape = gearSetup.cape,
+      neck = gearSetup.neck,
+      ammo = gearSetup.ammo,
+      weapon = gearSetup.weapon,
+      body = gearSetup.body,
+      shield = gearSetup.shield,
+      leg = gearSetup.leg,
+      hand = gearSetup.hand,
+      foot = gearSetup.foot,
+      ring = gearSetup.ring;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "row text-center pb-1",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Head_slot.png",
-          alt: "Head slot",
-          "data-slot": "head",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: head.icon && "data:image/png;base64, ".concat(head.icon) || "/icons/default-equipment-icons/Head_slot.png",
+            alt: "Head slot",
+            "data-slot": "head",
+            onClick: selectSlot
+          })
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "row justify-content-center pb-1",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Cape_slot.png",
-          alt: "Cape slot",
-          "data-slot": "cape",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: cape.icon && "data:image/png;base64, ".concat(cape.icon) || "/icons/default-equipment-icons/Cape_slot.png",
+            alt: "Cape slot",
+            "data-slot": "cape",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Neck_slot.png",
-          alt: "Neck slot",
-          "data-slot": "neck",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: neck.icon && "data:image/png;base64, ".concat(neck.icon) || "/icons/default-equipment-icons/Neck_slot.png",
+            alt: "Neck slot",
+            "data-slot": "neck",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Ammo_slot.png",
-          alt: "Ammo slot",
-          "data-slot": "ammo",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: ammo.icon && "data:image/png;base64, ".concat(ammo.icon) || "/icons/default-equipment-icons/Ammo_slot.png",
+            alt: "Ammo slot",
+            "data-slot": "ammo",
+            onClick: selectSlot
+          })
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "row justify-content-center pb-1",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Weapon_slot.png",
-          alt: "Weapon slot",
-          "data-slot": "weapon",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: weapon.icon && "data:image/png;base64, ".concat(weapon.icon) || "/icons/default-equipment-icons/Weapon_slot.png",
+            alt: "Weapon slot",
+            "data-slot": "weapon",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Body_slot.png",
-          alt: "Body slot",
-          "data-slot": "body",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: body.icon && "data:image/png;base64, ".concat(body.icon) || "/icons/default-equipment-icons/Body_slot.png",
+            alt: "Body slot",
+            "data-slot": "body",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Shield_slot.png",
-          alt: "Shield slot",
-          "data-slot": "shield",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: shield.icon && "data:image/png;base64, ".concat(shield.icon) || "/icons/default-equipment-icons/Shield_slot.png",
+            alt: "Shield slot",
+            "data-slot": "shield",
+            onClick: selectSlot
+          })
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "row text-center pb-1",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Legs_slot.png",
-          alt: "Legs slot",
-          "data-slot": "leg",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: leg.icon && "data:image/png;base64, ".concat(leg.icon) || "/icons/default-equipment-icons/Legs_slot.png",
+            alt: "Legs slot",
+            "data-slot": "leg",
+            onClick: selectSlot
+          })
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "row justify-content-center",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Hands_slot.png",
-          alt: "Hands slot",
-          "data-slot": "hand",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: hand.icon && "data:image/png;base64, ".concat(hand.icon) || "/icons/default-equipment-icons/Hands_slot.png",
+            alt: "Hands slot",
+            "data-slot": "hand",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Feet_slot.png",
-          alt: "Feet slot",
-          "data-slot": "foot",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: foot.icon && "data:image/png;base64, ".concat(foot.icon) || "/icons/default-equipment-icons/Feet_slot.png",
+            alt: "Feet slot",
+            "data-slot": "foot",
+            onClick: selectSlot
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "col-3 p-0 text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/icons/default-equipment-icons/Ring_slot.png",
-          alt: "Ring slot",
-          "data-slot": "ring",
-          onClick: selectSlot
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "equipment__slot-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: ring.icon && "data:image/png;base64, ".concat(ring.icon) || "/icons/default-equipment-icons/Ring_slot.png",
+            "data-slot": "ring",
+            onClick: selectSlot
+          })
         })
       })]
     })]

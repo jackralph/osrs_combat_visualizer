@@ -59,6 +59,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
 
     const [gearSetup, setGearSetup] = useState({
         head: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -79,6 +80,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         cape: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -99,6 +101,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         neck: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -119,6 +122,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         ammo: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -139,6 +143,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         weapon: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -159,6 +164,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         body: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -179,6 +185,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         shield: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -199,6 +206,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         leg: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -219,6 +227,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         hand: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -239,6 +248,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         foot: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -259,6 +269,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
             }
         },
         ring: {
+            icon: null,
             equipmentBonuses: {
                 attack_crush: 0,
                 attack_magic: 0,
@@ -316,7 +327,7 @@ const Equipment = ({ currentEquipmentStats, setCurrentEquipmentStats }) => {
         <div className="container equipment pt-3">
             <div className="row justify-content-md-center">
                 <div className="col-md equipment__loadout m-auto">
-                    <EquipmentSlots selectSlot={selectSlot} />
+                    <EquipmentSlots selectSlot={selectSlot} gearSetup={gearSetup} />
                 </div>
                 <div className="col-md table equipment__stats m-auto pt-4 table-responsive table-borderless">
                     <EquipmentStats currentEquipmentStats={currentEquipmentStats}/>
