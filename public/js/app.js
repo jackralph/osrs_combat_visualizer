@@ -12206,9 +12206,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interface/elements/InventoryTabs */ "./resources/js/components/interface/elements/InventoryTabs.jsx");
 /* harmony import */ var _interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interface/menus/equipment/Equipment */ "./resources/js/components/interface/menus/equipment/Equipment.jsx");
 /* harmony import */ var _interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interface/menus/inventory/Inventory */ "./resources/js/components/interface/menus/inventory/Inventory.jsx");
-/* harmony import */ var _interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/monsters/Monsters */ "./resources/js/components/interface/menus/monsters/Monsters.jsx");
-/* harmony import */ var _interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/prayers/Prayers */ "./resources/js/components/interface/menus/prayers/Prayers.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _interface_menus_levels_Levels__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interface/menus/levels/Levels */ "./resources/js/components/interface/menus/levels/Levels.jsx");
+/* harmony import */ var _interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interface/menus/monsters/Monsters */ "./resources/js/components/interface/menus/monsters/Monsters.jsx");
+/* harmony import */ var _interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interface/menus/prayers/Prayers */ "./resources/js/components/interface/menus/prayers/Prayers.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -12230,8 +12231,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var CombatVisualizer = function CombatVisualizer() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("equipment"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("levels"),
       _useState2 = _slicedToArray(_useState, 2),
       currentTab = _useState2[0],
       setCurrentTab = _useState2[1];
@@ -12277,22 +12279,20 @@ var CombatVisualizer = function CombatVisualizer() {
       currentEquipmentStats = _useState6[0],
       setCurrentEquipmentStats = _useState6[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_1__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_elements_InventoryTabs__WEBPACK_IMPORTED_MODULE_1__.default, {
       setCurrentTab: setCurrentTab,
       currentTab: currentTab
-    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+    }), currentTab === "inventory" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_inventory_Inventory__WEBPACK_IMPORTED_MODULE_3__.default, {}) : currentTab === "combat_styles" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
       children: "combat style"
-    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-      children: "levels"
-    }) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_4__.default, {
+    }) : currentTab === "levels" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_levels_Levels__WEBPACK_IMPORTED_MODULE_4__.default, {}) : currentTab === "monsters" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_monsters_Monsters__WEBPACK_IMPORTED_MODULE_5__.default, {
       currentMonsterStats: currentMonsterStats,
       setCurrentMonsterStats: setCurrentMonsterStats
-    }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_2__.default, {
+    }) : currentTab === "equipment" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_equipment_Equipment__WEBPACK_IMPORTED_MODULE_2__.default, {
       currentEquipmentStats: currentEquipmentStats,
       setCurrentEquipmentStats: setCurrentEquipmentStats
-    }) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_5__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+    }) : currentTab === "prayers" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_interface_menus_prayers_Prayers__WEBPACK_IMPORTED_MODULE_6__.default, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
       children: "Run"
     })]
   });
@@ -13287,6 +13287,208 @@ var Inventory = function Inventory() {
 
 /***/ }),
 
+/***/ "./resources/js/components/interface/menus/levels/Levels.jsx":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/interface/menus/levels/Levels.jsx ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_UserSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UserSearch */ "./resources/js/components/interface/menus/levels/components/UserSearch.jsx");
+/* harmony import */ var _components_UserStats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/UserStats */ "./resources/js/components/interface/menus/levels/components/UserStats.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+var Levels = function Levels() {
+  var fetchUserStats = function fetchUserStats(currentUsername) {
+    console.log("searching for " + currentUsername);
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    className: "container user pt-3",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "row justify-content-md-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "col-md user__search mr-auto ml-auto pt-4 text-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_UserSearch__WEBPACK_IMPORTED_MODULE_1__.default, {
+          fetchUserStats: fetchUserStats
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "col-md table user__stats m-auto pt-4 table-responsive table-borderless",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_UserStats__WEBPACK_IMPORTED_MODULE_2__.default, {})
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Levels);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/levels/components/UserSearch.jsx":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/levels/components/UserSearch.jsx ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var UserSearch = function UserSearch(_ref) {
+  var fetchUserStats = _ref.fetchUserStats;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentUsername = _useState2[0],
+      setCurrentUsername = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "user__search-bar input-group input-group-lg rounded-top",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        type: "text",
+        className: "form-control",
+        "aria-label": "Large",
+        "aria-describedby": "inputGroup-sizing-sm",
+        placeholder: "Search for user",
+        value: currentUsername,
+        onChange: function onChange(e) {
+          return setCurrentUsername(e.target.value);
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "input-group-append",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "input-group-text user__search-button",
+          id: "inputGroup-sizing-lg",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faSearch,
+            onClick: function onClick() {
+              return fetchUserStats(currentUsername);
+            }
+          })
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserSearch);
+
+/***/ }),
+
+/***/ "./resources/js/components/interface/menus/levels/components/UserStats.jsx":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/interface/menus/levels/components/UserStats.jsx ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var UserStats = function UserStats() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+    className: "table table-sm",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+          scope: "col",
+          children: "Combat stats"
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/tab-icons/Combat_icon.png",
+            alt: "Combat icon"
+          }), " 1"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/skill-icons/Attack_icon.png",
+            alt: "Attack icon"
+          }), " 1"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/skill-icons/Strength_icon.png",
+            alt: "Strength icon"
+          }), " 1"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/skill-icons/Defence_icon.png",
+            alt: "Defence icon"
+          }), " 1"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/skill-icons/Magic_icon.png",
+            alt: "Magic icon"
+          }), " 1"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/icons/skill-icons/Ranged_icon.png",
+            alt: "Ranged icon"
+          }), " 1"]
+        })
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserStats);
+
+/***/ }),
+
 /***/ "./resources/js/components/interface/menus/monsters/Monsters.jsx":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/interface/menus/monsters/Monsters.jsx ***!
@@ -13425,16 +13627,7 @@ var MonsterSearch = function MonsterSearch(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "monster__search-bar input-group input-group-lg rounded-top",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "input-group-prepend",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-          className: "input-group-text",
-          id: "inputGroup-sizing-lg",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faSearch
-          })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
         type: "text",
         className: "form-control",
         "aria-label": "Large",
@@ -13443,6 +13636,15 @@ var MonsterSearch = function MonsterSearch(_ref) {
         onFocus: toggleDropDown,
         onBlur: toggleDropDown,
         onChange: handleMonsterSearch
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "input-group-append",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "input-group-text",
+          id: "inputGroup-sizing-lg",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faSearch
+          })
+        })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "monster__dropdown-menu-container",

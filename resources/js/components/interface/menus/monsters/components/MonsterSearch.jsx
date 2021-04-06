@@ -34,12 +34,12 @@ const MonsterSearch = ({ handleMonsterSearch, monsterList, setCurrentMonsterStat
     return (
         <>
             <div className="monster__search-bar input-group input-group-lg rounded-top">
-                <div className="input-group-prepend">
+                <input type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Search for monster" onFocus={toggleDropDown} onBlur={toggleDropDown} onChange={handleMonsterSearch} />
+                <div className="input-group-append">
                     <span className="input-group-text" id="inputGroup-sizing-lg">
                         <FontAwesomeIcon icon={faSearch} />
                     </span>
                 </div>
-                <input type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Search for monster" onFocus={toggleDropDown} onBlur={toggleDropDown} onChange={handleMonsterSearch} />
             </div>
             <div className="monster__dropdown-menu-container">
                 <div id="monster_dropdown-menu" className="monster__dropdown-menu dropdown-menu border">
